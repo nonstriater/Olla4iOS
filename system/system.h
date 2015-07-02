@@ -40,5 +40,7 @@
 #import "UINavigationItem+MultipleButtonsAddition.h"
 #import "UIWebView+addtions.h"
 
+#import "UITabBarController+hidable.h"
+
 
 #endif

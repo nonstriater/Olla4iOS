@@ -6,10 +6,10 @@
 //  Copyright (c) 2014年 xiaoran. All rights reserved.
 //
 
-///////////////// basic /////////////////////////////
 
 #import "foundation.h"
 #import "system.h"
+#import "application.h"
 
 #import <objc/runtime.h>
 #import "__macro__.h"
