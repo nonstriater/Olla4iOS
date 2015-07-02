@@ -54,7 +54,10 @@
 // audio
 #import "OllaAudioSound.h"
 
-
+// asset Library
+#import "ALAsset+additions.h"
+#import "ALAssetsGroup+additions.h"
+#import "OllaAssetsLoader.h"
 
 
 #endif
