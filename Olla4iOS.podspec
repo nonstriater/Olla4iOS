@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 	s.homepage 	= "http://weibo.com/ranwj"
 
 
-	s.source 		= {:git => 'https://github.com/nonstriater/Olla4iOS.git'}
+	s.source 		= {:git => 'https://github.com/nonstriater/Olla4iOS.git' :tag => 'v0.1.1'}
 	s.source_files 	= '**/*.{h,m}'
 	s.requires_arc 	= true
 
