@@ -12,7 +12,7 @@
 
 //type
 - (BOOL)isPhoto;
-- (BOOL)isVedio;
+- (BOOL)isVideo;
 
 //
 - (BOOL)isEqual:(id)object;

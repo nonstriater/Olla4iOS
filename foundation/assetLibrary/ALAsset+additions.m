@@ -17,7 +17,7 @@
     return [[self valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypePhoto];
 }
 
-- (BOOL)isVedio{
+- (BOOL)isVideo{
     return [[self valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypeVideo];
 }
 
