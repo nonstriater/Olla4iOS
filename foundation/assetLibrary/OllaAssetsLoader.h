@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AssetsLibrary/AssetsLibrary.h"
 
 @interface OllaAssetsLoader : NSObject
 

@@ -8,6 +8,7 @@
 
 #import "OllaAssetsLoader.h"
 #import "ALAsset+additions.h"
+#import "Olla4iOS.h"
 
 @interface OllaAssetsLoader ()
 
