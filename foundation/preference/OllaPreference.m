@@ -7,7 +7,7 @@
 //
 
 #import "OllaPreference.h"
-#import "OllaFramework.h"
+#import "foundation.h"
 
 @interface OllaPreference (){
     NSString *_currentPath;
@@ -47,13 +47,11 @@
      
         _uid = uid;
         if ([uid length]==0) {
-            DDLogWarn(@"uid设置为空？");
             return;
         }
  
         NSString *path = [[OllaSandBox libPrefPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@.plist",_fullNamespace ,uid]];
         if (![OllaSandBox createFileIfNotExist:path]) {
-            DDLogError(@"创建文件失败:path=%@",path);
             return;
         }
         _userInfo = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
@@ -67,26 +65,21 @@
 
 - (id)valueForKey:(NSString *)defaultName{
     if ([self.uid length]==0) {
-        DDLogError(@"设置uid先");
         return nil;
     }
-    DDLogInfo(@"-valueForKey preference %@.%@.plist",_fullNamespace, self.uid);
     return [_userInfo valueForKey:defaultName];
 }
 
 - (void)setValue:(id)value forKey:(NSString *)defaultName{
     if ([self.uid length]==0) {
-        DDLogError(@"设置uid先");
         return;
     }
-    DDLogInfo(@"-setValue:forKey: preference %@.%@.plist",_fullNamespace, self.uid);
     [_userInfo setValue:value forKey:defaultName];
     [self synchronize];
 }
 
 - (void)removeValueForKey:(NSString *)defaultName{
     if ([self.uid length]==0) {
-        DDLogError(@"设置uid先");
         return;
     }
     [_userInfo removeObjectForKey:defaultName];

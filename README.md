@@ -2,8 +2,8 @@
 
 ### Installation
 
-OllaFramework can be installed using CocaoPods
-> pod OllaFramework
+Olla4iOS can be installed using CocaoPods
+> pod Olla4iOS
 
 
 ### Contact

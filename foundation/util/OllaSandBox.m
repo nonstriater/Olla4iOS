@@ -7,7 +7,6 @@
 //
 
 #import "OllaSandBox.h"
-#import "OllaFramework.h"
 
 @implementation OllaSandBox
 
@@ -57,39 +56,13 @@
 }
 
 
-+ (BOOL)pathWithString:(NSString *)stringPath{
-
-//    if ([stringPath hasPrefix:@"/"]) {
-//        stringPath = [stringPath substringFromIndex:1];
-//    }
-//    NSArray *components = [stringPath componentsSeparatedByString:@"/"];
-//    
-//    NSMutableString *path = [NSMutableString stringWithString:@"/"];
-//    for (int i=0; i<[components count]; i++) {
-//        NSString *component = components[i];
-//        [path stringByAppendingPathComponent:component];
-//        if (i==[components count]-1) {
-//            if (![OllaSandBox createFileIfNotExist:path]) {
-//                return NO;
-//            }
-//        }
-//        if (![OllaSandBox createPathIfNotExist:path]) {
-//            return NO;
-//        }
-//    }
-
-    return YES;
-}
-
 + (BOOL)createPathIfNotExist:(NSString *)path;{
 
     if (NO==[[NSFileManager defaultManager] fileExistsAtPath:path]) {
         NSError *error = nil;
         BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
-        if (success && !error) {
-            return YES;
-        }else{
-            DDLogError(@"CREATE Path fail:%@",error);
+        if (!success || error) {
+            return NO;
         }
         
     }

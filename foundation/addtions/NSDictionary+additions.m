@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 xiaoran. All rights reserved.
 //
 
-#import "OllaFramework.h"
+#import "Olla4iOS.h"
 #import "foundation.h"
 
 @implementation NSDictionary (additions)
@@ -159,7 +159,7 @@
         id value = [map valueForKey:key];
         
         if ([value isNull]) {
-            DDLogWarn(@"nil value detect for key:%@",_key);
+            NSLog(@"nil value detect for key:%@",_key);
             value = _key;
         }
         

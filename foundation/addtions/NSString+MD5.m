@@ -9,7 +9,7 @@
 #import <CommonCrypto/CommonCrypto.h>
 #import "NSString+MD5.h"
 #import "NSData+AES.h"
-#import "OllaFramework.h"
+#import "Olla4iOS.h"
 
 @implementation NSString (MD5)
 

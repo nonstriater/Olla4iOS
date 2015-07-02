@@ -17,7 +17,6 @@
 + (NSString *)libCachePath;
 + (NSString *)tmpPath;
 
-+ (BOOL)pathWithString:(NSString *)stringPath;
 + (BOOL)createPathIfNotExist:(NSString *)path;
 + (BOOL)createFileIfNotExist:(NSString *)path;
 + (BOOL)deleteItem:(NSString *)path;

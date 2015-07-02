@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (size)
 
+//计算字符串占据的size
 - (CGSize)sizeWithFont:(UIFont *)font constrainedSize:(CGSize)size;
 
 //判断是否含有字串，iOS8以后才添加了一个-containsString的方法

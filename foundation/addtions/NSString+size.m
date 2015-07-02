@@ -7,7 +7,7 @@
 //
 
 #import "NSString+size.h"
-#import "OllaFramework.h"
+#import "Olla4iOS.h"
 
 @implementation NSString (size)
 
