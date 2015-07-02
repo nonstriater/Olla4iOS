@@ -9,6 +9,7 @@
 ///////////////// basic /////////////////////////////
 
 #import "foundation.h"
+#import "system.h"
 
 #import <objc/runtime.h>
 #import "__macro__.h"
