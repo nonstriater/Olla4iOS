@@ -7,12 +7,15 @@
 //
 
 #import "OllaPreference.h"
-#import "foundation.h"
 
 @interface OllaPreference (){
-    NSString *_currentPath;
-    NSString *_fullNamespace;
+    
+    NSString *_currentFilePath;//文件绝对路径
+    NSString *_fullNamespace;// 文件命名前缀
 }
+
+@property(nonatomic,strong) NSMutableDictionary *userInfo;
+
 
 @end
 
@@ -29,17 +32,49 @@
     return instance;
 }
 
-- (instancetype)init{
-    return [self initWithNamespace:@"com.between.olla"];
+- (NSString *)fullNamespace{
+    if (!_fullNamespace) {
+        _fullNamespace = @"com.between.olla";
+    }
+    return _fullNamespace;
 }
 
-- (id)initWithNamespace:(NSString *)fullNamespace{
-    self = [super init];
-    if (self) {
-        _fullNamespace = fullNamespace;
+- (NSString *)path{
+
+    if (!_path) {
+        _path = [OllaSandBox libPrefPath];
     }
-    return self;
+   return _path;
 }
+
+
+- (NSString *)filePath{
+    
+    if (!_currentFilePath) {
+        NSString *filePath = [self.path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@.plist",self.fullNamespace ,self.uid]];
+        if (![OllaSandBox createFileIfNotExist:filePath]) {
+            DDLogError(@"创建文件失败:path=%@",filePath);
+            return nil;
+        }
+        _currentFilePath = filePath;
+    }
+    
+    return _currentFilePath;
+
+}
+
+- (NSMutableDictionary *)userInfo{
+
+    if (!_userInfo) {
+        _userInfo = [[NSMutableDictionary alloc] initWithContentsOfFile:[self filePath]];
+        if(!_userInfo){
+            _userInfo = [NSMutableDictionary dictionary];
+        }
+
+    }
+    return _userInfo;
+}
+
 
 - (void)setUid:(NSString *)uid{
     
@@ -47,48 +82,55 @@
      
         _uid = uid;
         if ([uid length]==0) {
+            DDLogWarn(@"uid设置为空,设置uid先");
             return;
         }
- 
-        NSString *path = [[OllaSandBox libPrefPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@.plist",_fullNamespace ,uid]];
-        if (![OllaSandBox createFileIfNotExist:path]) {
-            return;
-        }
-        _userInfo = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-        if(!_userInfo){
-            _userInfo = [NSMutableDictionary dictionary];
-        }
-        
-        _currentPath = path;
     }
 }
 
 - (id)valueForKey:(NSString *)defaultName{
     if ([self.uid length]==0) {
+        DDLogError(@"uid设置为空,设置uid先");
         return nil;
     }
-    return [_userInfo valueForKey:defaultName];
+    id value = [self.userInfo valueForKey:defaultName];
+    DDLogInfo(@"-valueForKey(%@=%@) at preference %@",defaultName,value,[self filePath]);
+    return value;
 }
 
 - (void)setValue:(id)value forKey:(NSString *)defaultName{
     if ([self.uid length]==0) {
+        DDLogError(@"设置uid先");
         return;
     }
-    [_userInfo setValue:value forKey:defaultName];
+    DDLogInfo(@"-setValue:(%@) forKey:(%@) at preference %@",value,defaultName,[self filePath]);
+    if (!value) {
+        return;
+    }
+    if ([value isNull]) {
+        value = @"";
+    }
+    [self.userInfo setValue:value forKey:defaultName];
+    [self synchronize];
+}
+
+- (void)addUserInfo:(NSDictionary *)__userInfo{
+    [self.userInfo addEntriesFromDictionary:[__userInfo propertyListDictionary]];
     [self synchronize];
 }
 
 - (void)removeValueForKey:(NSString *)defaultName{
     if ([self.uid length]==0) {
+        DDLogError(@"设置uid先");
         return;
     }
-    [_userInfo removeObjectForKey:defaultName];
+    [self.userInfo removeObjectForKey:defaultName];
     [self synchronize];
 }
 
 - (BOOL)synchronize{
 
-   return [_userInfo writeToFile:_currentPath atomically:YES];
+   return [self.userInfo writeToFile:_currentFilePath atomically:YES];
 }
 
 @end

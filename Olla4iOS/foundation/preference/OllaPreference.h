@@ -10,14 +10,15 @@
 
 @interface OllaPreference : NSObject
 
-@property(nonatomic,strong) NSString *uid;
-@property(nonatomic,strong) NSMutableDictionary *userInfo;
+@property(nonatomic,copy) NSString *uid;
+@property(nonatomic,copy) NSString *fullNamespace;
+@property(nonatomic,copy) NSString *path;//文件存储路径
 
 + (OllaPreference *)defaultInstance;
-- (id)initWithNamespace:(NSString *)fullNamespace;
 
 - (id)valueForKey:(NSString *)defaultName;
 - (void)setValue:(id)value forKey:(NSString *)defaultName;
+- (void)addUserInfo:(NSDictionary *)userInfo;
 - (void)removeValueForKey:(NSString *)defaultName;
 
 - (BOOL)synchronize;
