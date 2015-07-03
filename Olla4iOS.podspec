@@ -14,8 +14,13 @@ Pod::Spec.new do |s|
 	s.library 		= 'sqlite3'
 
 	s.source 		= {:git => 'https://github.com/nonstriater/Olla4iOS.git', :tag => 'v0.1.1'}
-	s.public_header_files = 'Olla4iOS/*.h'
   	s.source_files = 'Olla4iOS/*.h'
+
+  	s.dependency 'SDWebImage', '~> 3.7.2'
+  	s.dependency 'FMDB', '~> 2.5'
+  	s.dependency 'MBProgressHUD', '~> 0.9.1'
+  	s.dependency 'CocoaLumberjack', '~> 2.0.1'
+
 
   	s.subspec 'foundation' do |ss|
   		ss.source_files = 'Olla4iOS/foundation/**/*.{h,m}'
