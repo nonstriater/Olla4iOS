@@ -24,7 +24,13 @@ PODS:
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
   - Expecta (1.0.0)
-  - Olla4iOS (0.1.1)
+  - Olla4iOS (0.1.1):
+    - Olla4iOS/application (= 0.1.1)
+    - Olla4iOS/foundation (= 0.1.1)
+    - Olla4iOS/system (= 0.1.1)
+  - Olla4iOS/application (0.1.1)
+  - Olla4iOS/foundation (0.1.1)
+  - Olla4iOS/system (0.1.1)
   - RBStoryboardLink (0.1.4)
   - SVProgressHUD (1.1.3)
   - YTKNetwork (0.2.0):
@@ -46,7 +52,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Olla4iOS:
-    :commit: 71fc77b20fa2ad91b73bd4685952614b23df93f5
+    :commit: ee4130ff5f261c382171e3cd209bf9657a5fed10
     :git: https://github.com/nonstriater/Olla4iOS
 
 SPEC CHECKSUMS:
@@ -54,7 +60,7 @@ SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  Olla4iOS: cd096b734bef4951082b23940ab780ea6c3d69b4
+  Olla4iOS: ce6f4ced72f4f9e0905b00568e0346df4a2b4a4e
   RBStoryboardLink: 0faae84aea6a5e8716c4469984d847d958c3fcb3
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   YTKNetwork: 8adc811cb3877e0d2993aa873d9869ac058bdb84

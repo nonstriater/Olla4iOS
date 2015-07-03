@@ -72,6 +72,24 @@
 #define COCOAPODS_VERSION_MINOR_Olla4iOS 1
 #define COCOAPODS_VERSION_PATCH_Olla4iOS 1
 
+// Olla4iOS/application
+#define COCOAPODS_POD_AVAILABLE_Olla4iOS_application
+#define COCOAPODS_VERSION_MAJOR_Olla4iOS_application 0
+#define COCOAPODS_VERSION_MINOR_Olla4iOS_application 1
+#define COCOAPODS_VERSION_PATCH_Olla4iOS_application 1
+
+// Olla4iOS/foundation
+#define COCOAPODS_POD_AVAILABLE_Olla4iOS_foundation
+#define COCOAPODS_VERSION_MAJOR_Olla4iOS_foundation 0
+#define COCOAPODS_VERSION_MINOR_Olla4iOS_foundation 1
+#define COCOAPODS_VERSION_PATCH_Olla4iOS_foundation 1
+
+// Olla4iOS/system
+#define COCOAPODS_POD_AVAILABLE_Olla4iOS_system
+#define COCOAPODS_VERSION_MAJOR_Olla4iOS_system 0
+#define COCOAPODS_VERSION_MINOR_Olla4iOS_system 1
+#define COCOAPODS_VERSION_PATCH_Olla4iOS_system 1
+
 // RBStoryboardLink
 #define COCOAPODS_POD_AVAILABLE_RBStoryboardLink
 #define COCOAPODS_VERSION_MAJOR_RBStoryboardLink 0

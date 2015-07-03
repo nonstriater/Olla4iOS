@@ -15,19 +15,19 @@ Pod::Spec.new do |s|
 
 	s.source 		= {:git => 'https://github.com/nonstriater/Olla4iOS.git', :tag => 'v0.1.1'}
 	s.public_header_files = 'Olla4iOS/*.h'
-  	s.source_files = 'Olla4iOS/Olla4iOS.h'
+  	s.source_files = 'Olla4iOS/*.h'
 
   	s.subspec 'foundation' do |ss|
-  		ss.source_files = 'Olla4iOS/foundation/*.{h,m}'
+  		ss.source_files = 'Olla4iOS/foundation/**/*.{h,m}'
   	end 
 
 	s.subspec 'system' do |ss|
-		ss.source_files = 'Olla4iOS/system/*.{h,m}'
+		ss.source_files = 'Olla4iOS/system/**/*.{h,m}'
 
   	end 
 
   	s.subspec 'application' do |ss|
-  		ss.source_files = 'Olla4iOS/application/*.{h,m}'
+  		ss.source_files = 'Olla4iOS/application/**/*.{h,m}'
   	end 
 
 end 	
