@@ -7,8 +7,7 @@
 //
 
 #import "OllaImageBrowserView.h"
-#import "UIView+Gesture.h"
-#import "OllaFramework.h"
+#import "Olla4iOS.h"
 
 @interface OllaImageBrowserView (){
     
