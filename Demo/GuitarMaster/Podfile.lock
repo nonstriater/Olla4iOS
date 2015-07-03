@@ -85,7 +85,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Olla4iOS:
-    :commit: 640ae4a1282b1999d3dc1ceeb2ac86b4e9e1f7e7
+    :commit: 4be11e99d3ee39512b24a6058eef0b9491772f26
     :git: https://github.com/nonstriater/Olla4iOS
 
 SPEC CHECKSUMS:
