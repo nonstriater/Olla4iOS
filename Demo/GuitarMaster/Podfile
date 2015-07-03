@@ -11,6 +11,6 @@ pod 'Olla4iOS', :git => 'https://github.com/nonstriater/Olla4iOS', :branch => 'm
 
 target :GuitarMasterTests do
     pod 'Expecta', '~> 1.0.0'
-    pod 'Specta', '~> 0.4.0'
+    pod 'Specta', '~> 0.4.0
 end
 
