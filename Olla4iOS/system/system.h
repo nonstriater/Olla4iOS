@@ -32,6 +32,7 @@
 
 #import "UIView+Gesture.h"
 #import "UIView+additions.h"
+#import "UIView+style.h"
 #import "UIAlertView+Blocks.h"
 #import "UIActionSheet+Blocks.h"
 #import "UITableViewCell+additions.h"
