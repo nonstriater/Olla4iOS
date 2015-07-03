@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6B41B6ED2E7B07A62701AF2"
+               BlueprintIdentifier = "805841C0419EDC78B709CB4E"
                BuildableName = "libPods-GuitarMasterTests-AFDownloadRequestOperation.a"
                BlueprintName = "Pods-GuitarMasterTests-AFDownloadRequestOperation"
                ReferencedContainer = "container:Pods.xcodeproj">

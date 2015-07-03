@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "465383956E75E5DDD3FF5176"
+               BlueprintIdentifier = "B3A924FF5B7D792A6544218D"
                BuildableName = "libPods-YTKNetwork.a"
                BlueprintName = "Pods-YTKNetwork"
                ReferencedContainer = "container:Pods.xcodeproj">

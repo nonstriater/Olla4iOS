@@ -21,7 +21,7 @@
 #define NTLog(fmt,...) NSLog((@"%s [line %d]" fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__);
 #define UTLog(fmt,...) {UIAlertView *alert =  [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show];}
 
-static const int ddLogLevel =  LOG_LEVEL_INFO;
+static const int ddLogLevel =  DDLogLevelInfo;//(LOG_LEVEL_VERBOSE  v2.0 deprecated)
 //#define DDLogError(fmt,...) NLog(fmt,##__VA_ARGS__);
 //#define DDLogWarn(fmt,...) NLog(fmt,##__VA_ARGS__);
 //#define DDLogInfo(fmt,...) NLog(fmt,##__VA_ARGS__);
@@ -31,7 +31,7 @@ static const int ddLogLevel =  LOG_LEVEL_INFO;
 #define NTLog(fmt,...)
 #define UTLog(fmt,...)
 
-static const int ddLogLevel =  LOG_LEVEL_OFF;
+static const int ddLogLevel =  DDLogLevelOff;//(LOG_LEVEL_OFF  v2.0 deprecated)
 //#define DDLogError(fmt,...) 
 //#define DDLogWarn(fmt,...)
 //#define DDLogInfo(fmt,...)
