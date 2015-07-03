@@ -42,5 +42,12 @@
 
 #import "UITabBarController+hidable.h"
 
+#import "OllaImagePickerController.h"
+#import "OllaImageBrowserView.h"
+#import "UIButton+CacheURL.h"
+#import "UIImageView+CacheURL.h"
+#import "UIImageView+ProgressHUD.h"
+#import "UIViewController+HUD.h"
+
 
 #endif
