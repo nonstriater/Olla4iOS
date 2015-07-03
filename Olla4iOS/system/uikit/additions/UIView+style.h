@@ -17,8 +17,6 @@
 @property(nonatomic,assign) IBInspectable CGFloat cornerRadius;
 @property(nonatomic,assign) IBInspectable CGFloat blurRadius;
 
-- (UIView *)instanceWithStyle:(NSString *)style;
-
 //设置某几个角的圆角
 - (void)roundingCorners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius;
 
