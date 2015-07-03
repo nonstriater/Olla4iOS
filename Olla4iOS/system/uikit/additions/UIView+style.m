@@ -7,7 +7,7 @@
 //
 
 #import "UIView+style.h"
-#import "OllaStyleParser.h"
+#import "Olla4iOS.h"
 
 @implementation UIView (style)
 
