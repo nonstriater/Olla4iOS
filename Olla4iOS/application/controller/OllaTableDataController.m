@@ -157,8 +157,8 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if ([self.delegate respondsToSelector:@selector(tableDataController:didSelectAtIndexPath:)]) {
-        [self.delegate tableDataController:self didSelectAtIndexPath:indexPath];
+    if ([self.delegate respondsToSelector:@selector(tableDataController:didSelectRowAtIndexPath:)]) {
+        [self.delegate tableDataController:self didSelectRowAtIndexPath:indexPath];
     }
     
 }
