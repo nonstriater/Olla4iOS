@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3CCC007DFA12E18291DF7D2"
+               BlueprintIdentifier = "ED2970AF32C71926F18D6844"
                BuildableName = "libPods-GuitarMasterTests-YTKNetwork.a"
                BlueprintName = "Pods-GuitarMasterTests-YTKNetwork"
                ReferencedContainer = "container:Pods.xcodeproj">
