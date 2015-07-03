@@ -2,7 +2,7 @@
 Pod::Spec.new do |s| 
 	
 	s.name 		= "Olla4iOS"
-	s.version 	= "0.1.1"
+	s.version 	= "0.1.2"
 	s.author 	= {'nonstriater' => '510495266@qq.com'}
 	s.summary 	= "iOS framework"
 	s.platform 	= :ios, '6.0'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 	s.frameworks 	= 'AVFoundation','QuartzCore','CoreText','AssetsLibrary'
 	s.library 		= 'sqlite3'
 
-	s.source 		= {:git => 'https://github.com/nonstriater/Olla4iOS.git', :tag => 'v0.1.1'}
+	s.source 		= {:git => 'https://github.com/nonstriater/Olla4iOS.git', :tag => 'v0.1.2'}
   	s.source_files = 'Olla4iOS/*.h'
 
   	s.dependency 'SDWebImage', '~> 3.7.2'
