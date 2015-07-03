@@ -8,7 +8,25 @@
 #ifndef Olla___macro___h
 #define Olla___macro___h
 
-#import "Olla4iOS.h"
+
+/////////////// dependency ////////////////////
+
+#import "FMDB.h"
+#import "CocoaLumberjack.h"
+#import "MBProgressHUD.h"
+
+#import "SDImageCache.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+
+
+
+///////////////// version /////////////////////////////
+
+#undef OLLA_VERSION
+#define OLLA_VERSION @"0.1.2"
+
+
 
 ////////////////////// log /////////////////////////////
 #undef __ON__
@@ -39,13 +57,8 @@ static const int ddLogLevel =  DDLogLevelOff;//(LOG_LEVEL_OFF  v2.0 deprecated)
 #endif
 
 
-///////////////// version /////////////////////////////
 
-#undef OLLA_VERSION
-#define OLLA_VERSION @"0.1.2"
-
-
-///////////////// base /////////////////////////////
+///////////////// common /////////////////////////////
 
 
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)

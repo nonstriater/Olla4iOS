@@ -20,16 +20,5 @@
 #import "AVFoundation/AVFoundation.h"
 
 
-/////////////// dependency ////////////////////
-
-#import "FMDB.h"
-#import "CocoaLumberjack.h"
-#import "MBProgressHUD.h"
-
-#import "SDImageCache.h"
-#import "UIImageView+WebCache.h"
-#import "UIButton+WebCache.h"
-
-
 
 
