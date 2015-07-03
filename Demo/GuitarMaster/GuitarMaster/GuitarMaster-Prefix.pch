@@ -14,7 +14,7 @@
     #import <CoreLocation/CoreLocation.h>
     #import <AVFoundation/AVFoundation.h>
     #import <CoreData/CoreData.h>
-    #import "OllaFramework.h"
+    #import "Olla4iOS.h"
 #endif
 
 //

@@ -52,7 +52,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Olla4iOS:
-    :commit: ee4130ff5f261c382171e3cd209bf9657a5fed10
+    :commit: 7ebd5eabf797b4f71e791ca9ff8805a5fb19691a
     :git: https://github.com/nonstriater/Olla4iOS
 
 SPEC CHECKSUMS:
@@ -60,7 +60,7 @@ SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  Olla4iOS: ce6f4ced72f4f9e0905b00568e0346df4a2b4a4e
+  Olla4iOS: f55c991ce21935e025482922fd8799abc20675e2
   RBStoryboardLink: 0faae84aea6a5e8716c4469984d847d958c3fcb3
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   YTKNetwork: 8adc811cb3877e0d2993aa873d9869ac058bdb84
