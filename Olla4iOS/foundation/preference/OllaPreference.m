@@ -18,7 +18,7 @@
 
 @implementation OllaPreference
 
-+ (OllaPreference *)shareInstance{
++ (OllaPreference *)defaultInstance{
     
     static OllaPreference *instance = nil;
     static dispatch_once_t onceToken;

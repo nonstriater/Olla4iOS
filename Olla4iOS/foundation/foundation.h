@@ -46,10 +46,8 @@
 // network
 #import "OllaSocket.h"
 
-// cache
+// preferenc
 #import "OllaPreference.h"
-
-// db
 
 // audio
 #import "OllaAudioSound.h"

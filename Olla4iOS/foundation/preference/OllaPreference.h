@@ -13,7 +13,7 @@
 @property(nonatomic,strong) NSString *uid;
 @property(nonatomic,strong) NSMutableDictionary *userInfo;
 
-+ (OllaPreference *)shareInstance;
++ (OllaPreference *)defaultInstance;
 - (id)initWithNamespace:(NSString *)fullNamespace;
 
 - (id)valueForKey:(NSString *)defaultName;
