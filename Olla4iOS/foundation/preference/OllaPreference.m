@@ -95,7 +95,6 @@
         return nil;
     }
     id value = [self.userInfo valueForKey:defaultName];
-    DDLogInfo(@"-valueForKey(%@=%@) at preference %@",defaultName,value,[self filePath]);
     return value;
 }
 
@@ -104,7 +103,6 @@
         DDLogError(@"设置uid先");
         return;
     }
-    DDLogInfo(@"-setValue:(%@) forKey:(%@) at preference %@",value,defaultName,[self filePath]);
     if (!value) {
         return;
     }
@@ -131,7 +129,12 @@
 
 - (BOOL)synchronize{
 
-   return [self.userInfo writeToFile:_currentFilePath atomically:YES];
+   BOOL ret = [self.userInfo writeToFile:_currentFilePath atomically:YES];
+    if (!ret) {
+        DDLogError(@"preference 写入plist文件失败，filePath=%@",self.userInfo,[self filePath]);
+    }
+    
+    return ret;
 }
 
 @end
