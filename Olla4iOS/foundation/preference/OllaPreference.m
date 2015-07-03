@@ -7,6 +7,7 @@
 //
 
 #import "OllaPreference.h"
+#import "Olla4iOS.h"
 
 @interface OllaPreference (){
     
