@@ -8,7 +8,7 @@
 #ifndef Olla___macro___h
 #define Olla___macro___h
 
-
+#import "Olla4iOS.h"
 
 ////////////////////// log /////////////////////////////
 #undef __ON__
@@ -20,17 +20,21 @@
 
 #define NLog(fmt,...) NSLog((@"%s [line %d]" fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__);
 #define ULog(fmt,...) {UIAlertView *alert =  [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show];}
-#define DDLogError(fmt,...) NLog(fmt,##__VA_ARGS__);
-#define DDLogWarn(fmt,...) NLog(fmt,##__VA_ARGS__);
-#define DDLogInfo(fmt,...) NLog(fmt,##__VA_ARGS__);
+
+#define ddLogLever LOG_LEVEL_INOF
+//#define DDLogError(fmt,...) NLog(fmt,##__VA_ARGS__);
+//#define DDLogWarn(fmt,...) NLog(fmt,##__VA_ARGS__);
+//#define DDLogInfo(fmt,...) NLog(fmt,##__VA_ARGS__);
 
 #else
 
 #define NLog(fmt,...) 
 #define ULog(fmt,...)
-#define DDLogError(fmt,...) 
-#define DDLogWarn(fmt,...)
-#define DDLogInfo(fmt,...)
+
+#define ddLogLever LOG_LEVEL_OFF
+//#define DDLogError(fmt,...) 
+//#define DDLogWarn(fmt,...)
+//#define DDLogInfo(fmt,...)
 
 #endif
 

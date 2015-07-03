@@ -60,41 +60,101 @@
 #define COCOAPODS_VERSION_MINOR_Aspects 4
 #define COCOAPODS_VERSION_PATCH_Aspects 1
 
+// CocoaLumberjack
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 2
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack 0
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 1
+
+// CocoaLumberjack/Core
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Core
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Core 2
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Core 0
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Core 1
+
+// CocoaLumberjack/Default
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Default
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Default 2
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Default 0
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Default 1
+
+// CocoaLumberjack/Extensions
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Extensions
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Extensions 2
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 0
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 1
+
 // Expecta
 #define COCOAPODS_POD_AVAILABLE_Expecta
 #define COCOAPODS_VERSION_MAJOR_Expecta 1
 #define COCOAPODS_VERSION_MINOR_Expecta 0
 #define COCOAPODS_VERSION_PATCH_Expecta 0
 
+// FMDB
+#define COCOAPODS_POD_AVAILABLE_FMDB
+#define COCOAPODS_VERSION_MAJOR_FMDB 2
+#define COCOAPODS_VERSION_MINOR_FMDB 5
+#define COCOAPODS_VERSION_PATCH_FMDB 0
+
+// FMDB/common
+#define COCOAPODS_POD_AVAILABLE_FMDB_common
+#define COCOAPODS_VERSION_MAJOR_FMDB_common 2
+#define COCOAPODS_VERSION_MINOR_FMDB_common 5
+#define COCOAPODS_VERSION_PATCH_FMDB_common 0
+
+// FMDB/standard
+#define COCOAPODS_POD_AVAILABLE_FMDB_standard
+#define COCOAPODS_VERSION_MAJOR_FMDB_standard 2
+#define COCOAPODS_VERSION_MINOR_FMDB_standard 5
+#define COCOAPODS_VERSION_PATCH_FMDB_standard 0
+
+// MBProgressHUD
+#define COCOAPODS_POD_AVAILABLE_MBProgressHUD
+#define COCOAPODS_VERSION_MAJOR_MBProgressHUD 0
+#define COCOAPODS_VERSION_MINOR_MBProgressHUD 9
+#define COCOAPODS_VERSION_PATCH_MBProgressHUD 1
+
 // Olla4iOS
 #define COCOAPODS_POD_AVAILABLE_Olla4iOS
 #define COCOAPODS_VERSION_MAJOR_Olla4iOS 0
 #define COCOAPODS_VERSION_MINOR_Olla4iOS 1
-#define COCOAPODS_VERSION_PATCH_Olla4iOS 1
+#define COCOAPODS_VERSION_PATCH_Olla4iOS 2
 
 // Olla4iOS/application
 #define COCOAPODS_POD_AVAILABLE_Olla4iOS_application
 #define COCOAPODS_VERSION_MAJOR_Olla4iOS_application 0
 #define COCOAPODS_VERSION_MINOR_Olla4iOS_application 1
-#define COCOAPODS_VERSION_PATCH_Olla4iOS_application 1
+#define COCOAPODS_VERSION_PATCH_Olla4iOS_application 2
 
 // Olla4iOS/foundation
 #define COCOAPODS_POD_AVAILABLE_Olla4iOS_foundation
 #define COCOAPODS_VERSION_MAJOR_Olla4iOS_foundation 0
 #define COCOAPODS_VERSION_MINOR_Olla4iOS_foundation 1
-#define COCOAPODS_VERSION_PATCH_Olla4iOS_foundation 1
+#define COCOAPODS_VERSION_PATCH_Olla4iOS_foundation 2
 
 // Olla4iOS/system
 #define COCOAPODS_POD_AVAILABLE_Olla4iOS_system
 #define COCOAPODS_VERSION_MAJOR_Olla4iOS_system 0
 #define COCOAPODS_VERSION_MINOR_Olla4iOS_system 1
-#define COCOAPODS_VERSION_PATCH_Olla4iOS_system 1
+#define COCOAPODS_VERSION_PATCH_Olla4iOS_system 2
 
 // RBStoryboardLink
 #define COCOAPODS_POD_AVAILABLE_RBStoryboardLink
 #define COCOAPODS_VERSION_MAJOR_RBStoryboardLink 0
 #define COCOAPODS_VERSION_MINOR_RBStoryboardLink 1
 #define COCOAPODS_VERSION_PATCH_RBStoryboardLink 4
+
+// SDWebImage
+#define COCOAPODS_POD_AVAILABLE_SDWebImage
+#define COCOAPODS_VERSION_MAJOR_SDWebImage 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage 2
+
+// SDWebImage/Core
+#define COCOAPODS_POD_AVAILABLE_SDWebImage_Core
+#define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage_Core 2
 
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD

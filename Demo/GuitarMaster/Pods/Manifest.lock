@@ -23,15 +23,48 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - CocoaLumberjack (2.0.1):
+    - CocoaLumberjack/Default (= 2.0.1)
+    - CocoaLumberjack/Extensions (= 2.0.1)
+  - CocoaLumberjack/Core (2.0.1)
+  - CocoaLumberjack/Default (2.0.1):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.1):
+    - CocoaLumberjack/Default
   - Expecta (1.0.0)
-  - Olla4iOS (0.1.1):
-    - Olla4iOS/application (= 0.1.1)
-    - Olla4iOS/foundation (= 0.1.1)
-    - Olla4iOS/system (= 0.1.1)
-  - Olla4iOS/application (0.1.1)
-  - Olla4iOS/foundation (0.1.1)
-  - Olla4iOS/system (0.1.1)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - MBProgressHUD (0.9.1)
+  - Olla4iOS (0.1.2):
+    - CocoaLumberjack (~> 2.0.1)
+    - FMDB (~> 2.5)
+    - MBProgressHUD (~> 0.9.1)
+    - Olla4iOS/application (= 0.1.2)
+    - Olla4iOS/foundation (= 0.1.2)
+    - Olla4iOS/system (= 0.1.2)
+    - SDWebImage (~> 3.7.2)
+  - Olla4iOS/application (0.1.2):
+    - CocoaLumberjack (~> 2.0.1)
+    - FMDB (~> 2.5)
+    - MBProgressHUD (~> 0.9.1)
+    - SDWebImage (~> 3.7.2)
+  - Olla4iOS/foundation (0.1.2):
+    - CocoaLumberjack (~> 2.0.1)
+    - FMDB (~> 2.5)
+    - MBProgressHUD (~> 0.9.1)
+    - SDWebImage (~> 3.7.2)
+  - Olla4iOS/system (0.1.2):
+    - CocoaLumberjack (~> 2.0.1)
+    - FMDB (~> 2.5)
+    - MBProgressHUD (~> 0.9.1)
+    - SDWebImage (~> 3.7.2)
   - RBStoryboardLink (0.1.4)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
   - SVProgressHUD (1.1.3)
   - YTKNetwork (0.2.0):
     - AFDownloadRequestOperation (~> 2.0)
@@ -52,16 +85,20 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Olla4iOS:
-    :commit: 7ebd5eabf797b4f71e791ca9ff8805a5fb19691a
+    :commit: 640ae4a1282b1999d3dc1ceeb2ac86b4e9e1f7e7
     :git: https://github.com/nonstriater/Olla4iOS
 
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CocoaLumberjack: 019d1361244274a6138c788c6cb80baabc13fb8f
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  Olla4iOS: f55c991ce21935e025482922fd8799abc20675e2
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  Olla4iOS: f38cba8b313ca0b14cbe4884bd8b140dc69d8ea0
   RBStoryboardLink: 0faae84aea6a5e8716c4469984d847d958c3fcb3
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   YTKNetwork: 8adc811cb3877e0d2993aa873d9869ac058bdb84
 
