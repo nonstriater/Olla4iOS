@@ -11,7 +11,7 @@
 //刷新和分页加载
 @interface OllaTablePageController : OllaTableDataController
 
-@property(nonatomic,strong) IBOutlet UIControl<IOllaLoadingView> *topRefreshView;
+@property(nonatomic,strong) IBOutlet UIControl<IOllaRefreshView> *topRefreshView;
 
 @property(nonatomic,strong) IBOutlet UITableViewCell<IOllaLoadingMoreView> *bottomLoadingView;
 
@@ -21,7 +21,7 @@
 
 
 // 子类重写，做自己的业务逻辑
-- (void)tableViewRefreshTrigger:(UIControl<IOllaLoadingView> *)refreshView;
+- (void)tableViewRefreshTrigger:(UIControl<IOllaRefreshView> *)refreshView;
 
 - (void)tableViewHaveScrollToBottom;
 

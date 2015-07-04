@@ -24,7 +24,7 @@
 
 
 
-@protocol IOllaLoadingView <NSObject>
+@protocol IOllaRefreshView <NSObject>
 
 - (void)beginRefreshing;
 - (void)endRefreshing;

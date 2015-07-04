@@ -12,7 +12,7 @@
 
 
 //TODO:8
-@interface OllaRefreshView : UIControl<IOllaLoadingView>{
+@interface OllaRefreshView : UIControl<IOllaRefreshView>{
     CAShapeLayer *_shapeLayer;
     CAShapeLayer *_arrowLayer;
     CAShapeLayer *_highlightLayer;

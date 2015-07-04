@@ -39,22 +39,26 @@
     [self.topRefreshView endRefreshing];
 }
 
+- (Class)refreshViewClass{
 
--(UIControl<IOllaLoadingView> *)topRefreshView{
+    return [OllaRefreshView class];
+}
+
+-(UIControl<IOllaRefreshView> *)topRefreshView{
     
     if (!self.refreshViewEnable) {
         return nil;
     }
     
     if (!_topRefreshView) {
-        _topRefreshView = [[OllaRefreshView alloc] initInScrollView:self.tableView];
+        _topRefreshView = [[[self refreshViewClass] alloc] initInScrollView:self.tableView];
         [_topRefreshView addTarget:self action:@selector(tableViewRefreshTrigger:) forControlEvents:UIControlEventValueChanged];
     }
     return _topRefreshView;
 }
 
 // 空
-- (void)tableViewRefreshTrigger:(UIControl<IOllaLoadingView> *)refreshView{
+- (void)tableViewRefreshTrigger:(UIControl<IOllaRefreshView> *)refreshView{
     NSLog(@"refresh trigger");
     [self refreshData];
 }
