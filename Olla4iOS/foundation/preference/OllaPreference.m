@@ -131,7 +131,7 @@
 
    BOOL ret = [self.userInfo writeToFile:_currentFilePath atomically:YES];
     if (!ret) {
-        DDLogError(@"preference 写入plist文件失败，filePath=%@",self.userInfo,[self filePath]);
+        DDLogError(@"preference 写入plist文件失败，userInfo = %@,filePath=%@",self.userInfo,[self filePath]);
     }
     
     return ret;
