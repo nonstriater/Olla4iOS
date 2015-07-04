@@ -14,6 +14,7 @@
 
 #import "OllaShell.h"
 #import "OllaViewController.h"
+#import "OllaTableViewController.h"
 #import "OllaNavigationController.h"
 #import "OllaTabBarController.h"
 #import "OllaTabViewController.h"
