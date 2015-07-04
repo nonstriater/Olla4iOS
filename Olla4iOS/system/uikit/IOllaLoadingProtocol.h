@@ -26,6 +26,8 @@
 
 @protocol IOllaRefreshView <NSObject>
 
+- (instancetype)initInScrollView:(UIScrollView *)scrollView;
+
 - (void)beginRefreshing;
 - (void)endRefreshing;
 

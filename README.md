@@ -27,8 +27,8 @@ Olla4iOS can be installed using CocaoPods
 
 
 ### 定制自己的refreshView
-实现自己的CoustomRefreshView, 实现IOllaRefreshView协议方法。
-在tableController里面重写：
+1. 实现自己的CoustomRefreshView, 实现IOllaRefreshView协议方法。
+2. 在tableController里面重写：
 - (class)refreshViewClass{
     return [CoustomRefreshView class];
 }
@@ -48,7 +48,7 @@ Olla4iOS can be installed using CocaoPods
 
 ### 我理解的做一个app的过程
 
-第一步：软件结构设计，定义各个模块以及他们之间的项目调用关系
+第一步：软件结构设计，定义各个模块以及他们之间的调用关系
 例如:model,api,dao,datasource,views,controllers,viewControllers，util
 第二步：SB/XIB 搭建所有UI和跳转逻辑
 第三步：各个模块开发,最起码做到api,dao,datasource单元测试
