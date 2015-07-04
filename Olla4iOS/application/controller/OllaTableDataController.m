@@ -130,6 +130,7 @@
     
     if ([cell isKindOfClass:[OllaTableViewCell class]]) {
         [(OllaTableViewCell *)cell setDelegate:self];// 代理cell上的button event
+        
         [self configCell:(OllaTableViewCell *)cell atIndexPath:indexPath];
     }
     

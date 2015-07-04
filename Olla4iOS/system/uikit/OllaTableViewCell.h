@@ -18,9 +18,10 @@ IB_DESIGNABLE
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName;
 
-
 - (IBAction)doAction:(id)sender;
 - (IBAction)doAction:(id)sender event:(UIEvent *)event;
+
+- (void)cancelHTTPRequestIfNeeded;
 
 
 @end

@@ -79,8 +79,11 @@ const static void *placeholderDisableKey = &placeholderDisableKey;
         });
         
     }];
-    
-    
+ 
+}
+
+- (void)cancelCurrentImageLoading{
+    [self sd_cancelCurrentImageLoad];
 }
 
 

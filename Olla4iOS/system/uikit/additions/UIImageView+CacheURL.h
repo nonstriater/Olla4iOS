@@ -23,6 +23,5 @@
  */
 
 // 使用SDWebImage的图片处理
-
-//- (void)cancelImageLoading;
+- (void)cancelCurrentImageLoading;
 @end

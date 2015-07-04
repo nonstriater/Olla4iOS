@@ -7,6 +7,7 @@
 //
 
 #import "OllaTableViewCell.h"
+#import "UIImageView+CacheURL.h"
 
 @implementation OllaTableViewCell
 
@@ -39,7 +40,6 @@
     return self;
 }
 
-
 - (void)setDataItem:(id)dataItem{
 
     if (_dataItem != dataItem) {
@@ -64,5 +64,16 @@
         [_delegate tableViewCell:self doAction:sender event:event];
     }
 }
+
+- (void)cancelHTTPRequestIfNeeded{
+    for (UIView *subView in [self.contentView subviews]) {
+        if ([subView isKindOfClass:[UIImageView class]]) {
+            [(UIImageView *)subView cancelCurrentImageLoading];
+        }
+    }
+
+}
+
+
 
 @end
