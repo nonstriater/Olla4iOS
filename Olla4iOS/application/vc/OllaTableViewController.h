@@ -1,19 +1,20 @@
 //
-//  OllaViewController.h
-//  OllaFramework
+//  OllaTableViewController.h
+//  Olla4iOSDemo
 //
-//  Created by nonstriater on 14-6-19.
-//  Copyright (c) 2014年 xiaoran. All rights reserved.
+//  Created by null on 15/7/4.
+//  Copyright (c) 2015年 nonstriater. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "IOllaUIViewController.h"
 #import "OllaDataController.h"
 
-@interface OllaViewController : UIViewController<IOllaUIViewController>
+@interface OllaTableViewController : UITableViewController<IOllaUIViewController>
 
-@property(nonatomic, strong) IBOutletCollection(id) NSArray *controllers;
-
+/**
+ * data & ui bind
+ */
 @property(nonatomic,strong) IBOutlet OllaDataBindContainer *dataBindContainer;
 
 /**
@@ -21,8 +22,7 @@
  */
 @property(nonatomic,strong) IBOutlet OllaDataController *controller;
 
-
-- (IBAction)doAction:(id)sender;
 - (void)applyDataBinding;
+- (IBAction)doAction:(id)sender;
 
 @end

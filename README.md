@@ -21,8 +21,9 @@ Olla4iOS can be installed using CocaoPods
 
 
 ### 数据model和 UI bind 时还需要转换计算
-也就是，model层的定义不满足UI展现需求时。比如： 
-1. model中的数据类型是NSDate而UI展示需要NSString类型
+也就是，model层的定义不满足UI展现需求时。比如：
+  
+1. model中的数据类型是NSDate而UI展示需要NSString类型  
 2. 微信中置顶的chat sessions Cell有特殊的背景色区分
 
 
@@ -40,12 +41,23 @@ Olla4iOS can be installed using CocaoPods
 比如微博的“发现”页面 (PS:我专门选择了一个复杂一点的页面)
 
 
+### 数据变化时UI响应变化
+
+比如：
+1. 微信首页上消息变化时
+2. 点赞
+
+
+
+
+
 ## 接下来
 
-目前Olla4iOS基本上只干了2件事情：
-1. 封装了列表的基本逻辑
-2. foundation里面一堆的helper类，也可以独立出来单独使用   
+目前Olla4iOS基本上只干了2件事情： 
   
+1. 封装了列表的基本逻辑  
+2. foundation里面一堆的helper类，也可以独立出来单独使用    
+   
 我还会继续维护和优化Olla4iOS框架。当然，这些改进和优化都会来自我在实际业务开发中的理解。
 
 

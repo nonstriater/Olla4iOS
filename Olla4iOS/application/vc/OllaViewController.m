@@ -25,7 +25,6 @@
 @synthesize alias = _alias;
 @synthesize scheme = _scheme;
 @synthesize parentController = _parentController;
-
 @synthesize dataBindContainer = _dataBindContainer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

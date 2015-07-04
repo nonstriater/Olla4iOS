@@ -26,8 +26,6 @@
 
 //@synthesize dataBindContainer = _dataBindContainer;
 
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
