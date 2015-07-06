@@ -21,6 +21,7 @@
 #import "OllaCollectionViewCell.h"
 #import "OllaTableViewCell.h"
 
+#import "OllaButton.h"
 #import "OllaFadeButton.h"
 #import "OllaMenuLabel.h"
 #import "OllaTableView.h"

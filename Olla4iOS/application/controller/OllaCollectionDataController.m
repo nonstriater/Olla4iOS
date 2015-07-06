@@ -32,10 +32,8 @@
         [self.collectionView registerNib:[UINib nibWithNibName:self.footerViewNib bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:self.footerViewNib];
     }
     
-    //配置collection的layout为nil时会导致崩溃
-    if (self.collectionViewLayout) {
-        self.collectionView.collectionViewLayout = self.collectionViewLayout;
-    }
+    //配置collection的layout为nil时会导致崩溃:reason: 'UICollectionView must be initialized with a non-nil layout parameter'
+    self.collectionView.collectionViewLayout = self.collectionViewLayout?:[[UICollectionViewFlowLayout alloc] init];
 }
 
 // collectionview  datasource
@@ -74,7 +72,7 @@
     NSString *reuseIdentifier = nil;
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         reuseIdentifier = self.headerReuseIdentifier;
-    }else if([kind isEqualToString:UICollectionElementKindSectionHeader]){
+    }else if([kind isEqualToString:UICollectionElementKindSectionFooter]){
         reuseIdentifier = self.footerReuseIdentifier;
     }
     
