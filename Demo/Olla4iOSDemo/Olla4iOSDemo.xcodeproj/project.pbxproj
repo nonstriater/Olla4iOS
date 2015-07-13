@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2609A3CD1B501C6F0096B51A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2609A3CC1B501C6F0096B51A /* InterfaceController.swift */; };
+		2609A3CF1B501C6F0096B51A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2609A3CE1B501C6F0096B51A /* NotificationController.swift */; };
+		2609A3D11B501C6F0096B51A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2609A3D01B501C6F0096B51A /* Images.xcassets */; };
+		2609A3D51B501C6F0096B51A /* Olla4iOSDemo WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 2609A3D41B501C6F0096B51A /* Olla4iOSDemo WatchKit App.app */; };
+		2609A3DD1B501C6F0096B51A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2609A3DB1B501C6F0096B51A /* Interface.storyboard */; };
+		2609A3DF1B501C6F0096B51A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2609A3DE1B501C6F0096B51A /* Images.xcassets */; };
+		2609A3E21B501C6F0096B51A /* Olla4iOSDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2609A3C71B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		26672A511B47F891005A219C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26672A501B47F891005A219C /* main.m */; };
 		26672A541B47F891005A219C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26672A531B47F891005A219C /* AppDelegate.m */; };
 		26672A571B47F891005A219C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26672A561B47F891005A219C /* FirstViewController.m */; };
@@ -20,6 +27,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2609A3D61B501C6F0096B51A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26672A431B47F891005A219C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2609A3D31B501C6F0096B51A;
+			remoteInfo = "Olla4iOSDemo WatchKit App";
+		};
+		2609A3E01B501C6F0096B51A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26672A431B47F891005A219C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2609A3C61B501C6E0096B51A;
+			remoteInfo = "Olla4iOSDemo WatchKit Extension";
+		};
 		26672A681B47F891005A219C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26672A431B47F891005A219C /* Project object */;
@@ -29,7 +50,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2609A39C1B5015490096B51A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2609A3E21B501C6F0096B51A /* Olla4iOSDemo WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2609A3C71B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Olla4iOSDemo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2609A3CA1B501C6F0096B51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2609A3CB1B501C6F0096B51A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2609A3CC1B501C6F0096B51A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		2609A3CE1B501C6F0096B51A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2609A3D01B501C6F0096B51A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2609A3D41B501C6F0096B51A /* Olla4iOSDemo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Olla4iOSDemo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2609A3DA1B501C6F0096B51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2609A3DC1B501C6F0096B51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2609A3DE1B501C6F0096B51A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26672A4B1B47F891005A219C /* Olla4iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olla4iOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26672A4F1B47F891005A219C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26672A501B47F891005A219C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +99,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2609A3C41B501C6E0096B51A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26672A481B47F891005A219C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,11 +124,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2609A3C81B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2609A3CC1B501C6F0096B51A /* InterfaceController.swift */,
+				2609A3CE1B501C6F0096B51A /* NotificationController.swift */,
+				2609A3D01B501C6F0096B51A /* Images.xcassets */,
+				2609A3C91B501C6E0096B51A /* Supporting Files */,
+			);
+			path = "Olla4iOSDemo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2609A3C91B501C6E0096B51A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2609A3CA1B501C6F0096B51A /* Info.plist */,
+				2609A3CB1B501C6F0096B51A /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2609A3D81B501C6F0096B51A /* Olla4iOSDemo WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				2609A3DB1B501C6F0096B51A /* Interface.storyboard */,
+				2609A3DE1B501C6F0096B51A /* Images.xcassets */,
+				2609A3D91B501C6F0096B51A /* Supporting Files */,
+			);
+			path = "Olla4iOSDemo WatchKit App";
+			sourceTree = "<group>";
+		};
+		2609A3D91B501C6F0096B51A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2609A3DA1B501C6F0096B51A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		26672A421B47F891005A219C = {
 			isa = PBXGroup;
 			children = (
 				26672A4D1B47F891005A219C /* Olla4iOSDemo */,
 				26672A6A1B47F891005A219C /* Olla4iOSDemoTests */,
+				2609A3C81B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension */,
+				2609A3D81B501C6F0096B51A /* Olla4iOSDemo WatchKit App */,
 				26672A4C1B47F891005A219C /* Products */,
 				9C41E5A5A3A4E777C84147EE /* Pods */,
 				B91F0BAE04D5F5F971EE65E2 /* Frameworks */,
@@ -88,6 +180,8 @@
 			children = (
 				26672A4B1B47F891005A219C /* Olla4iOSDemo.app */,
 				26672A671B47F891005A219C /* Olla4iOSDemoTests.xctest */,
+				2609A3C71B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension.appex */,
+				2609A3D41B501C6F0096B51A /* Olla4iOSDemo WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +252,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2609A3C61B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2609A3E61B501C6F0096B51A /* Build configuration list for PBXNativeTarget "Olla4iOSDemo WatchKit Extension" */;
+			buildPhases = (
+				2609A3C31B501C6E0096B51A /* Sources */,
+				2609A3C41B501C6E0096B51A /* Frameworks */,
+				2609A3C51B501C6E0096B51A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2609A3D71B501C6F0096B51A /* PBXTargetDependency */,
+			);
+			name = "Olla4iOSDemo WatchKit Extension";
+			productName = "Olla4iOSDemo WatchKit Extension";
+			productReference = 2609A3C71B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		2609A3D31B501C6F0096B51A /* Olla4iOSDemo WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2609A3E31B501C6F0096B51A /* Build configuration list for PBXNativeTarget "Olla4iOSDemo WatchKit App" */;
+			buildPhases = (
+				2609A3D21B501C6F0096B51A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Olla4iOSDemo WatchKit App";
+			productName = "Olla4iOSDemo WatchKit App";
+			productReference = 2609A3D41B501C6F0096B51A /* Olla4iOSDemo WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		26672A4A1B47F891005A219C /* Olla4iOSDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26672A711B47F891005A219C /* Build configuration list for PBXNativeTarget "Olla4iOSDemo" */;
@@ -167,10 +294,12 @@
 				26672A481B47F891005A219C /* Frameworks */,
 				26672A491B47F891005A219C /* Resources */,
 				F8E8C4887368B19E48C132F0 /* Copy Pods Resources */,
+				2609A39C1B5015490096B51A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2609A3E11B501C6F0096B51A /* PBXTargetDependency */,
 			);
 			name = Olla4iOSDemo;
 			productName = Olla4iOSDemo;
@@ -204,6 +333,12 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = nonstriater;
 				TargetAttributes = {
+					2609A3C61B501C6E0096B51A = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					2609A3D31B501C6F0096B51A = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 					26672A4A1B47F891005A219C = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
@@ -228,11 +363,31 @@
 			targets = (
 				26672A4A1B47F891005A219C /* Olla4iOSDemo */,
 				26672A661B47F891005A219C /* Olla4iOSDemoTests */,
+				2609A3C61B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension */,
+				2609A3D31B501C6F0096B51A /* Olla4iOSDemo WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2609A3C51B501C6E0096B51A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2609A3D51B501C6F0096B51A /* Olla4iOSDemo WatchKit App.app in Resources */,
+				2609A3D11B501C6F0096B51A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2609A3D21B501C6F0096B51A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2609A3DD1B501C6F0096B51A /* Interface.storyboard in Resources */,
+				2609A3DF1B501C6F0096B51A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26672A491B47F891005A219C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +441,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2609A3C31B501C6E0096B51A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2609A3CF1B501C6F0096B51A /* NotificationController.swift in Sources */,
+				2609A3CD1B501C6F0096B51A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26672A471B47F891005A219C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +473,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2609A3D71B501C6F0096B51A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2609A3D31B501C6F0096B51A /* Olla4iOSDemo WatchKit App */;
+			targetProxy = 2609A3D61B501C6F0096B51A /* PBXContainerItemProxy */;
+		};
+		2609A3E11B501C6F0096B51A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2609A3C61B501C6E0096B51A /* Olla4iOSDemo WatchKit Extension */;
+			targetProxy = 2609A3E01B501C6F0096B51A /* PBXContainerItemProxy */;
+		};
 		26672A691B47F891005A219C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 26672A4A1B47F891005A219C /* Olla4iOSDemo */;
@@ -317,6 +491,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2609A3DB1B501C6F0096B51A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2609A3DC1B501C6F0096B51A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		26672A5B1B47F891005A219C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,6 +518,63 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2609A3E41B501C6F0096B51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Olla4iOSDemo_WatchKit_Extension;
+				INFOPLIST_FILE = "Olla4iOSDemo WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		2609A3E51B501C6F0096B51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Olla4iOSDemo_WatchKit_Extension;
+				INFOPLIST_FILE = "Olla4iOSDemo WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		2609A3E71B501C6F0096B51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Olla4iOSDemo WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2609A3E81B501C6F0096B51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Olla4iOSDemo WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		26672A6F1B47F891005A219C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -479,6 +718,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2609A3E31B501C6F0096B51A /* Build configuration list for PBXNativeTarget "Olla4iOSDemo WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2609A3E41B501C6F0096B51A /* Debug */,
+				2609A3E51B501C6F0096B51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2609A3E61B501C6F0096B51A /* Build configuration list for PBXNativeTarget "Olla4iOSDemo WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2609A3E71B501C6F0096B51A /* Debug */,
+				2609A3E81B501C6F0096B51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		26672A461B47F891005A219C /* Build configuration list for PBXProject "Olla4iOSDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

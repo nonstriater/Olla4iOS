@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - Olla4iOSDemo WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Olla4iOSDemo WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Olla4iOSDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +22,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2609A3861B5015490096B51A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2609A3AD1B501C190096B51A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2609A3D31B501C6F0096B51A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>26672A4A1B47F891005A219C</key>
 		<dict>
 			<key>primary</key>

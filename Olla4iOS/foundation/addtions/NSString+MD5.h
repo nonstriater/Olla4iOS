@@ -16,7 +16,7 @@
 - (NSString *)decodeURLStringByAddingEscapteString;
 
 
-- (NSString *)MD5Encode;
+- (NSString *)md5Encode;
 - (NSString *)SHA1Encode;
 
 // base64 string  ---> data , 兼容iOS6

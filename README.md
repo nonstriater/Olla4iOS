@@ -16,7 +16,7 @@ Olla4iOS can be installed using CocaoPods
 
 也许你会说，我们的列表哪有这么简单，表急，下面我们看看，一些典型的开发问题，如何通过Olla4iOS框架来处理。
 
-### Header Cells
+### Static  Header Cells
 比如新浪微博首页顶部的广告或者微博“消息”这个列表上最上面3个Cell分别固定是“@我的”，@“评论”，@“赞”，剩下的是chat session 列表。
 
 
@@ -43,13 +43,10 @@ Olla4iOS can be installed using CocaoPods
 
 ### 数据变化时UI响应变化
 
-比如：
-1. 微信首页上消息变化时
-2. 点赞
-
-
-
-
+比如：  
+1. 微信首页上消息变化时  
+2. 点赞  
+  
 
 ## 接下来
 
@@ -64,7 +61,7 @@ Olla4iOS can be installed using CocaoPods
 >我理解的做一个app的过程
 
 - 第一步：软件结构设计，定义各个模块以及他们之间的调用关系
- 例如:model,api,dao,datasource,views,controllers,viewControllers，util
+ 例如:model,api(cyber),dao,datasource,views,controllers(集合列表用),viewControllers，util
 - 第二步：SB/XIB 搭建所有UI和跳转逻辑
 - 第三步：各个模块开发,最起码做到api,dao,datasource单元测试
 

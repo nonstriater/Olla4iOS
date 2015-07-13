@@ -34,7 +34,7 @@
 }
 
 
-- (NSString *)MD5Encode{
+- (NSString *)md5Encode{
 
     const char *cString = [self UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];

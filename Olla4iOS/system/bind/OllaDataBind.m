@@ -8,12 +8,13 @@
 
 #import "OllaDataBind.h"
 #import "NSObject+KeyPath.h"
+#import "foundation.h"
 
 @implementation OllaDataBind
 
+// 这是2个机关，_eanbledKeyPath 是0 断开bind ，——disabledKeyPath是1断开bind
 - (void)applyDataBinding:(id)data{
-    
-    // 这是2个机关，_eanbledKeyPath 是0 断开bind ，——disabledKeyPath是1断开bind
+ 
     if (_enabledKeyPath) {
         if (![self booleanValue:[data dataForKeyPath:_enabledKeyPath]]) {
             return;
@@ -30,9 +31,10 @@
     if ([_dataKeyPath length]>0) {
         value = [data dataForKeyPath:_dataKeyPath];
     }
-    if ([value isKindOfClass:[NSNull class]]) {
-        value = nil;
+    if (!value || [value isKindOfClass:[NSNull class]]) {
+        value = self.targetNilValue;
     }
+    
     for (UIView *view in _views) {
         //如果_urPropertyKeyPath 不满足view上的 key-value coding-compaint，这里会导致崩溃
         if ([_propertyKeyPath length]>0) {
@@ -40,6 +42,16 @@
             if ([value isKindOfClass:[NSNumber class]] && [_propertyKeyPath isEqualToString:@"text"]) {
                 value = [value stringValue];
             }
+            
+            if (self.convertor) {
+               value = [self.convertor transformedValue:value];
+            }
+
+            if ([value isString] && self.stringFormat && [self.stringFormat rangeOfString:@"%@"].location!=NSNotFound) {
+                value= [NSString stringWithFormat:self.stringFormat,value];
+
+            }
+            
             [view setValue:value forKeyPath:_propertyKeyPath];
         }
     }
