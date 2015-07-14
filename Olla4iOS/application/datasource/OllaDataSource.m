@@ -124,7 +124,7 @@
     
 }
 
-- (void)downlinkTaskDidLoadedFromCache:(id)cache timestamp:(NSDate *)timestamp forTaskType:(Protocol *)taskType{
+- (void)downlinkTaskDidLoadedFromCache:(id)cache timestamp:(NSDate *)timestamp{
     
     //    if (self.dataChanged) {
     //        [self.dataObjects removeAllObjects];
@@ -139,7 +139,7 @@
     // self.dataChanged = NO;
 }
 
-- (void)downlinkTaskDidLoaded:(id)data forTaskType:(Protocol *)taskType{
+- (void)downlinkTaskDidLoaded:(id)data{
     _loaded = NO;
     [self loadResultsData:data];
     
@@ -153,7 +153,7 @@
     //self.dataChanged = NO;
 }
 
-- (void)downlinkTaskDidFitalError:(NSError *)error forTaskType:(Protocol *)taskType{
+- (void)downlinkTaskDidFitalError:(NSError *)error{
     
     if ([_delegate respondsToSelector:@selector(dataSource:didFitalError:)]) {
         [_delegate dataSource:self didFitalError:error];

@@ -14,9 +14,9 @@
 @property(nonatomic,assign,getter = isDataChanged) BOOL dataChanged;
 
 @optional
-- (void)downlinkTaskDidLoadedFromCache:(id)cache timestamp:(NSDate *)timestamp forTaskType:(Protocol *)taskType;
+- (void)downlinkTaskDidLoadedFromCache:(id)cache timestamp:(NSDate *)timestamp;
 
-- (void)downlinkTaskDidLoaded:(id)data forTaskType:(Protocol *)taskType;
-- (void)downlinkTaskDidFitalError:(NSError *)error forTaskType:(Protocol *)taskType;
+- (void)downlinkTaskDidLoaded:(id)data;
+- (void)downlinkTaskDidFitalError:(NSError *)error;
 
 @end
