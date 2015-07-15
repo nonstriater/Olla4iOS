@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "OllaDataBindContainer.h"
 
-IB_DESIGNABLE
 @interface OllaTableViewCell : UITableViewCell
 
 @property(nonatomic,strong) IBOutlet OllaDataBindContainer *dataBindContainer;
