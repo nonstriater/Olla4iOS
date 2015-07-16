@@ -63,8 +63,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    NSLog(@"view did load:%@ ====== shell.currentVC=%@",self.url,self);
     [self.context setCurrentViewController:self];
 }
 
