@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "IOllaController.h"
 #import "IOllaDownlinkTask.h"
+#import "OllaTask.h"
 
-@interface OllaDataSource : NSObject<IOllaController,IOllaDownlinkTask>
+@interface OllaDataSource : OllaTask<IOllaController,IOllaDownlinkTask>
 
 @property(nonatomic,strong) NSMutableArray *dataObjects;
 

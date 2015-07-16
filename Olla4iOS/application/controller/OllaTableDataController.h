@@ -53,9 +53,9 @@
 @optional
 
 // cell上button事件处理
-- (void)tableDataController:(OllaController *)controller cell:(OllaTableViewCell *)cell doAction:(id<IOllaAction>)action event:(UIEvent *)event;
+- (void)tableDataController:(OllaDataController *)controller cell:(OllaTableViewCell *)cell doAction:(id<IOllaAction>)action event:(UIEvent *)event;
 // cell 选中事件处理
-- (void)tableDataController:(OllaController *)controller didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)tableDataController:(OllaDataController *)controller didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 
 @end

@@ -32,9 +32,9 @@
 @optional
 
 // cell上button事件处理
-- (void)collectionController:(OllaController *)controller cell:(OllaCollectionViewCell *)cell doAction:(id<IOllaAction>)action event:(UIEvent *)event;
+- (void)collectionController:(OllaDataController *)controller cell:(OllaCollectionViewCell *)cell doAction:(id<IOllaAction>)action event:(UIEvent *)event;
 // cell 选中事件处理
-- (void)collectionController:(OllaController *)controller didSelectAtIndexPath:(NSIndexPath *)indexPath;
+- (void)collectionController:(OllaDataController *)controller didSelectAtIndexPath:(NSIndexPath *)indexPath;
 
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 xiaoran. All rights reserved.
 //
 
-#import "OllaController.h"
+#import "OllaTask.h"
 
-@implementation OllaController
+@implementation OllaTask
 
 @synthesize context = _context;
 @synthesize delegate = _delegate;

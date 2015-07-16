@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "IOllaController.h"
 
-@interface OllaController : NSObject<IOllaController>
+@interface OllaTask : NSObject<IOllaController>
 
+@property(nonatomic,weak) id<IOllaUIContext> context;
+@property(nonatomic,weak) IBOutlet id delegate;
 @property(nonatomic,assign) NSUInteger tag;
 
 @end

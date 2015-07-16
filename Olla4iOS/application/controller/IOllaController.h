@@ -11,9 +11,6 @@
 
 @protocol IOllaController <NSObject>
 
-@property(nonatomic,weak) id<IOllaUIContext> context;
-@property(nonatomic,weak) IBOutlet id delegate;
-
 @optional
 - (void)viewLoaded;
 

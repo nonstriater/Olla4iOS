@@ -41,7 +41,7 @@
 
 @protocol OllaSearchTableControllerDelegate <NSObject>
 
-- (void)tableDataController:(OllaController *)controller tableView:(UITableView *)tableView didSelectAtIndexPath:(NSIndexPath *)indexPath;
+- (void)tableDataController:(OllaDataController *)controller tableView:(UITableView *)tableView didSelectAtIndexPath:(NSIndexPath *)indexPath;
 
 
 @end
