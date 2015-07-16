@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6AD7D7DE-3DC1-4BF8-AC6F-28A96E2460DB</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Olla4iOSDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FB3ED81FDFC67267678C61CC8A28DB7B29DC8C4A</key>
 		<string>https://github.com/nonstriater/Olla4iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Demo/Olla4iOSDemo/Olla4iOSDemo.xcodeproj/project.xcworkspace</string>
+	<string>Demo/Olla4iOSDemo/Olla4iOSDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FB3ED81FDFC67267678C61CC8A28DB7B29DC8C4A</key>

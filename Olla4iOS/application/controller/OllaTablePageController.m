@@ -16,7 +16,7 @@
     if (!self) {
         return nil;
     }
-    self.refreshViewEnable = YES;
+    
     self.pageEnabled = YES;
     return self;
 }
@@ -30,38 +30,12 @@
 - (void)stopLoading{
     
     [super stopLoading];
-    
     if ([self.dataSource respondsToSelector:@selector(hasMoreData)]) {
         self.bottomLoadingView.hasMoreData = [(OllaPageDataSource *)self.dataSource hasMoreData];
     }
-    
     [self.bottomLoadingView stopLoading];
-    [self.topRefreshView endRefreshing];
 }
 
-- (Class)refreshViewClass{
-
-    return [OllaRefreshView class];
-}
-
--(UIControl<IOllaRefreshView> *)topRefreshView{
-    
-    if (!self.refreshViewEnable) {
-        return nil;
-    }
-    
-    if (!_topRefreshView) {
-        _topRefreshView = [[[self refreshViewClass] alloc] initInScrollView:self.tableView];
-        [_topRefreshView addTarget:self action:@selector(tableViewRefreshTrigger:) forControlEvents:UIControlEventValueChanged];
-    }
-    return _topRefreshView;
-}
-
-// 空
-- (void)tableViewRefreshTrigger:(UIControl<IOllaRefreshView> *)refreshView{
-    NSLog(@"refresh trigger");
-    [self refreshData];
-}
 
 // to be overwrite
 - (void)tableViewHaveScrollToBottom{
@@ -99,14 +73,9 @@
 }
 
 
-//tableview delegate
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     // 如果[datasource count]为空,就不算middleCells
     NSUInteger dataSourceCount = [self.dataSource count];
-    //    if (!dataSourceCount) {
-    //        return [_headerCells count];
-    //    }
     return [self.headerCells count]+ dataSourceCount + 1;// loadingMore
 }
 

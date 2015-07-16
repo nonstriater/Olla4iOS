@@ -17,13 +17,29 @@
 
 @implementation OllaTableDataController
 
+- (instancetype)init{
+    if (self=[super init]) {
+        self.refreshViewEnable = YES;
+    }
+    return self;
+}
+
 - (void)dealloc{
     self.tableView.delegate = nil;
     self.tableView.dataSource = nil;
 }
 
+#pragma mark - refreshing 
+
+- (void)startLoading{
+    [super startLoading];
+    [self.topRefreshView beginRefreshing];
+}
+
 - (void)stopLoading{
+    [super stopLoading];
     
+    [self.topRefreshView endRefreshing];
     if (self.dataLoadingError) {
         if (self.dataNotFoundView && self.dataNotFoundView.superview==nil) {
             self.dataNotFoundView.frame = _tableView.bounds;
@@ -42,6 +58,31 @@
     }else{
         [self.dataEmptyView removeFromSuperview];
     }
+}
+
+
+- (Class)refreshViewClass{
+    
+    return [OllaRefreshView class];
+}
+
+-(UIControl<IOllaRefreshView> *)topRefreshView{
+    
+    if (!self.refreshViewEnable) {
+        return nil;
+    }
+    
+    if (!_topRefreshView) {
+        _topRefreshView = [[[self refreshViewClass] alloc] initInScrollView:self.tableView];
+        [_topRefreshView addTarget:self action:@selector(tableViewRefreshTrigger:) forControlEvents:UIControlEventValueChanged];
+    }
+    return _topRefreshView;
+}
+
+// 空
+- (void)tableViewRefreshTrigger:(UIControl<IOllaRefreshView> *)refreshView{
+    NSLog(@"refresh trigger");
+    [self refreshData];
 }
 
 

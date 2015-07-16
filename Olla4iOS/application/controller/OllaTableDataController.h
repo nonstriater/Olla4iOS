@@ -29,6 +29,13 @@
 @property(nonatomic,strong) NSArray *cellTypeGroup;//多种cell类型
 @property(nonatomic,assign) BOOL canCellDelete;
 
+
+@property(nonatomic,strong) IBOutlet UIControl<IOllaRefreshView> *topRefreshView;
+@property(nonatomic,assign) BOOL refreshViewEnable;
+
+// 刷新触发，子类重写，做自己的业务逻辑
+- (void)tableViewRefreshTrigger:(UIControl<IOllaRefreshView> *)refreshView;
+
 //针对一个列表多种动态cell类型
 - (NSString *)nibNameAtIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
