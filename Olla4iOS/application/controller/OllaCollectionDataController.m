@@ -17,7 +17,7 @@
 
     [super viewLoaded];
     if ([self.itemViewNib length]) {
-        [self.collectionView registerNib:[UINib nibWithNibName:self.itemViewNib bundle:nil] forCellWithReuseIdentifier:self.reusableCellIdentifier];
+        [self.collectionView registerNib:[UINib nibWithNibName:self.itemViewNib bundle:nil] forCellWithReuseIdentifier:self.itemViewNib];
     }else{
         DDLogWarn(@"使用xib布局时，itemViewNib空会崩溃");
     }
@@ -49,7 +49,7 @@
     
     static NSString *reuseIdentifier= nil;
     if (reuseIdentifier==nil) {
-        reuseIdentifier = self.reusableCellIdentifier;
+        reuseIdentifier = self.itemViewNib;
     }
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
