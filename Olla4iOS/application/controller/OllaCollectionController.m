@@ -10,24 +10,6 @@
 
 @implementation OllaCollectionController
 
-
-- (NSString *)reusableCellIdentifier{
-    
-    NSString *reuseIdentifier= _reusableCellIdentifier;
-    
-    if (!reuseIdentifier) {
-        reuseIdentifier = _itemViewNib;
-    }
-    
-    if (!reuseIdentifier) {
-        reuseIdentifier = @"Cell";
-    }
-    
-    return reuseIdentifier;
-}
-
-
-
 -(void)cancel{
     self.dataLoadingError = NO;
     [super cancel];

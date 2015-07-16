@@ -29,6 +29,9 @@
 @property(nonatomic,strong) NSArray *cellTypeGroup;//多种cell类型
 @property(nonatomic,assign) BOOL canCellDelete;
 
+//针对一个列表多种动态cell类型
+- (NSString *)nibNameAtIndexPath:(NSIndexPath *)indexPath;
+
 //必须要调用super，除非你知道意味着什么！！
 - (void)configCell:(OllaTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end

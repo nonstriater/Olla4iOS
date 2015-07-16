@@ -17,21 +17,6 @@
 
 @implementation OllaTableDataController
 
--(void)viewLoaded{
-    NSAssert(self.itemViewNib!=nil,@"set self.itemviewNib please");
-    if ([self.itemViewNib length]) {
-        if (!self.reusableCellIdentifier) {
-            self.reusableCellIdentifier = self.itemViewNib;
-        }
-        //nib must contain exactly one top level object which must be a UITableViewCell instance
-        //binddata object 非法
-//        [self.tableView registerNib:[UINib nibWithNibName:self.itemViewNib bundle:nil] forCellReuseIdentifier:self.reusableCellIdentifier];
-    }else{
-        DDLogWarn(@"xib布局cell情况下，itemViewNib空会崩溃");
-    }    
-}
-
-
 - (void)dealloc{
     self.tableView.delegate = nil;
     self.tableView.dataSource = nil;
@@ -75,9 +60,6 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     NSUInteger dataSourceCount = [self.dataSource count];
-    //    if (!dataSourceCount) {
-    //        return [_headerCells count];
-    //    }
     return [_headerCells count]+ dataSourceCount ;
 }
 
@@ -110,9 +92,17 @@
      3. sb中没有必要再使用： initWithStyle：Nib：
      */
     
+    NSString *nibName = [self nibNameAtIndexPath:indexPath];
+    if(!nibName){
+        nibName = self.itemViewNib;
+    }
+    if(!nibName){
+        DDLogWarn(@"没有nib name");
+    }
+    
     static NSString *reuseIdentifier= nil;
     if (!reuseIdentifier) {
-        reuseIdentifier = self.reusableCellIdentifier;
+        reuseIdentifier = nibName;
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
@@ -124,7 +114,7 @@
             clazz = [OllaTableViewCell class];
         }
         
-        cell = [[clazz alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier nibName:self.itemViewNib];
+        cell = [[clazz alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier nibName:nibName];
     }
     
     
@@ -135,6 +125,11 @@
     }
     
     return cell;
+}
+
+// to be override
+- (NSString *)nibNameAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
 }
 
 // to be override

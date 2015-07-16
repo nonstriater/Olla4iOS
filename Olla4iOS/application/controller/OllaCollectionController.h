@@ -15,8 +15,7 @@
 @property(nonatomic,strong) IBOutlet UIView *dataNotFoundView;
 @property(nonatomic,assign) BOOL dataLoadingError;
 
-@property(nonatomic,copy) NSString *itemViewNib;
-@property(nonatomic,copy) NSString *reusableCellIdentifier;
+@property(nonatomic,copy) NSString *itemViewNib;//same as cell id
 
 - (void)startLoading;
 - (void)stopLoading;
