@@ -31,6 +31,8 @@
 
 //针对一个列表多种动态cell类型
 - (NSString *)nibNameAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 
 //必须要调用super，除非你知道意味着什么！！
 - (void)configCell:(OllaTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;

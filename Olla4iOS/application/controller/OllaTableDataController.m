@@ -71,11 +71,13 @@
 //    UITableViewCell *cell = nil;
 //    if (cell.fd_isTemplateLayoutCell) {//动态高度
 //        [tableView fd_heightForCellWithIdentifier:self.reusableCellIdentifier cacheByIndexPath:indexPath configuration:nil];
-//    }
+//    }s
     
-    return tableView.rowHeight;
+    CGFloat height = [self heightForRowAtIndexPath:indexPath];
+    if(height<0.00001f)
+        return tableView.rowHeight;
+    return height;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -130,6 +132,10 @@
 // to be override
 - (NSString *)nibNameAtIndexPath:(NSIndexPath *)indexPath{
     return nil;
+}
+
+- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 0.f;
 }
 
 // to be override
