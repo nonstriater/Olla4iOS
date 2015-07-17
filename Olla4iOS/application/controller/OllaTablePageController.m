@@ -21,12 +21,6 @@
     return self;
 }
 
-- (void)startLoading{
-    [super startLoading];
-    [self.topRefreshView beginRefreshing];
-    //bug:ODRefreshControl在iOS7，navigation管理的tableview时，存在44px偏移
-}
-
 - (void)stopLoading{
     
     [super stopLoading];
