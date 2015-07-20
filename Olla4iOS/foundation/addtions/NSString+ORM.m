@@ -18,7 +18,7 @@
     NSError *error = nil;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:&error];
     if (error) {
-        NSLog(@"JSON Read ERROR:%@",error);
+        NSLog(@"JSON Read ERROR:%@\n Original String=%@",error,self);
         return nil;
     }
     
