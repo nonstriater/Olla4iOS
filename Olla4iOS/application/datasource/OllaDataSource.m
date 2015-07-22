@@ -66,13 +66,13 @@
 }
 
 
--(NSInteger) count{
+- (NSInteger)count{
     
     return [_dataObjects count];
 }
 
 
--(NSMutableArray *)dataObjects{
+- (NSMutableArray *)dataObjects{
     if (!_dataObjects) {
         _dataObjects = [[NSMutableArray alloc] init];
     }
@@ -89,7 +89,7 @@
 }
 
 
--(id) dataObjectAtIndex:(NSUInteger) index{
+- (id)dataObjectAtIndex:(NSUInteger) index{
     
     if (index<[self count]) {
         return [_dataObjects objectAtIndex:index];
@@ -112,7 +112,7 @@
  *
  *  @param resultsData
  */
--(void) loadResultsData:(id) resultsData{
+- (void)loadResultsData:(id) resultsData{
     
     id items = _dataKey ? [resultsData dataForKeyPath:_dataKey]:resultsData;
     if ([items isKindOfClass:[NSArray class]]) {
