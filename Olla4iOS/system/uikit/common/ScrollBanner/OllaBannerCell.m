@@ -28,6 +28,7 @@
 - (void)layoutUI{
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    imageView.backgroundColor = RGB_HEX(0xDFDFDF);
     [self addSubview:imageView];
     self.imageView = imageView;
     

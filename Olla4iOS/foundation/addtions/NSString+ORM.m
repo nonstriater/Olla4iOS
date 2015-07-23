@@ -32,7 +32,7 @@
     NSError *error= nil;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:&error];
     if (error) {
-        NSLog(@"JSON parse ERROR:%@",error);
+        NSLog(@"JSON parse ERROR:%@\n Original String=%@",error,self);
     }
     
     return dict;
