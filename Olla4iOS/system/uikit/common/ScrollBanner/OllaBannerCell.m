@@ -7,7 +7,7 @@
 //
 
 #import "OllaBannerCell.h"
-#import "UIImageView+CacheURL.h"
+#import "Olla4iOS.h"//for ddlogerror()
 
 @implementation OllaBannerCell
 
