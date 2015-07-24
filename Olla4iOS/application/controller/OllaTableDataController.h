@@ -26,12 +26,13 @@
 @property(nonatomic,strong) IBOutletCollection(UITableViewCell) NSMutableArray *headerCells;//方便应对“cell可消除”这样的需求
 @property(nonatomic,strong) IBOutletCollection(UITableViewCell) NSArray *footerCells;
 
-@property(nonatomic,strong) NSArray *cellTypeGroup;//多种cell类型
-@property(nonatomic,assign) BOOL canCellDelete;
-
-
 @property(nonatomic,strong) IBOutlet UIControl<IOllaRefreshView> *topRefreshView;
 @property(nonatomic,assign) BOOL refreshViewEnable;
+
+/**
+ *  cell 是否允许删除
+ */
+@property(nonatomic,assign) BOOL canCellDelete;
 
 // 刷新触发，子类重写，做自己的业务逻辑
 - (void)tableViewRefreshTrigger:(UIControl<IOllaRefreshView> *)refreshView;
@@ -43,6 +44,8 @@
 
 //必须要调用super，除非你知道意味着什么！！
 - (void)configCell:(OllaTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
+
 @end
 
 
