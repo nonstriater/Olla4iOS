@@ -192,10 +192,10 @@
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section==0) {
-       return [self.dataSource dataObjectAtIndex:(indexPath.row-[_headerCells count])];// 这里要设置好，不然数据错位
+        return [self.dataSource dataObjectAtIndexPath:[NSIndexPath indexPathForRow:(indexPath.row-[_headerCells count]) inSection:0]];
     }
     
-    return [self.dataSource dataObjectAtIndex:indexPath.row];
+    return [self.dataSource dataObjectAtIndexPath:indexPath];
 }
 
 
