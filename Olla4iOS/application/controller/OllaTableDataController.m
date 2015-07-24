@@ -95,13 +95,16 @@
 
 #pragma mark - tableview datasource / delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return [self.dataSource numberOfSection];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    NSUInteger dataSourceCount = [self.dataSource count];
-    return [_headerCells count]+ dataSourceCount ;
+    NSUInteger dataSourceCount = [self.dataSource numberOfCellsAtSection:section];
+    if (section==0) {
+        return [_headerCells count] + dataSourceCount ;
+    }
+    return  dataSourceCount ;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -124,7 +127,7 @@
     
     DDLogInfo(@"indexPath row = %ld",(long)indexPath.row);
     
-    if (indexPath.row<[_headerCells count]) {
+    if (indexPath.section==0 && indexPath.row<[_headerCells count]) {
         return [_headerCells objectAtIndex:indexPath.row];
     }
     
@@ -185,14 +188,14 @@
     [(OllaTableViewCell *)cell setDataItem:data];
 }
 
-- (id)dataAtIndexRow:(NSInteger)row{
-    
-    return [self dataAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0]];
-}
-
 // middle insert/ search table 就可以重写这个方法，这样写，主要是方便子类重写
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath{
-    return [self.dataSource dataObjectAtIndex:(indexPath.row-[_headerCells count])];// 这里要设置好，不然数据错位
+    
+    if (indexPath.section==0) {
+       return [self.dataSource dataObjectAtIndex:(indexPath.row-[_headerCells count])];// 这里要设置好，不然数据错位
+    }
+    
+    return [self.dataSource dataObjectAtIndex:indexPath.row];
 }
 
 

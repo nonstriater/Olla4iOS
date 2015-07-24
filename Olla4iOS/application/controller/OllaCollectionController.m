@@ -28,12 +28,6 @@
 - (void)stopLoading{
 }
 
-
-- (id)dataAtIndexRow:(NSInteger)row{
-    
-    return [self dataAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0]];
-}
-
 // 主要是方便子类重写
 // 这里的设计有缺陷，如何支持二维数组数据结构？？？？？
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath{

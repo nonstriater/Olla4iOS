@@ -20,7 +20,6 @@
 - (void)startLoading;
 - (void)stopLoading;
 
-- (id)dataAtIndexRow:(NSInteger)row;
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath;
 
 
