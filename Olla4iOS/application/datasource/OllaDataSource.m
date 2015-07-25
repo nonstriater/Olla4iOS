@@ -21,26 +21,7 @@
 
 }
 
--(void) refreshData{
-    
-    //[self.dataObjects removeAllObjects];// 在新数据下载后再清
-    [self loadData];
-}
-
--(void) loadData{
-    
-    _loading = YES;
-    if (_delegate && [_delegate respondsToSelector:@selector(dataSourceWillLoading:)]) {
-        [_delegate dataSourceWillLoading:self];
-    }
-    
-}
-
--(void) cancel{
-    
-    _loading = NO;
-}
-
+#pragma  mark - access data
 
 - (NSUInteger)numberOfSection{
     
@@ -107,12 +88,36 @@
     return YES;
 }
 
+
+#pragma mark - load data
+
+-(void) refreshData{
+    
+    [self loadData];
+}
+
+-(void) loadData{
+    
+    _loading = YES;
+    if (_delegate && [_delegate respondsToSelector:@selector(dataSourceWillLoading:)]) {
+        [_delegate dataSourceWillLoading:self];
+    }
+    
+}
+
+-(void) cancel{
+    
+    _loading = NO;
+}
+
 /**
  *  resutl.data
  *
  *  @param resultsData
  */
 - (void)loadResultsData:(id) resultsData{
+    
+    [[self dataObjects] removeAllObjects];
     
     id items = _dataKey ? [resultsData dataForKeyPath:_dataKey]:resultsData;
     if ([items isKindOfClass:[NSArray class]]) {
@@ -141,6 +146,7 @@
 
 - (void)downlinkTaskDidLoaded:(id)data{
     _loaded = NO;
+    
     [self loadResultsData:data];
     
     if (_delegate && [_delegate respondsToSelector:@selector(dataSourceDidLoaded:)]) {
