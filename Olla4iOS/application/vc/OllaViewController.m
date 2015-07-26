@@ -8,7 +8,6 @@
 
 #import "OllaViewController.h"
 #import "IOllaAction.h"
-#import "IOllaController.h"
 #import "Olla4iOS.h"
 
 @interface OllaViewController ()
@@ -39,33 +38,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-   
-#ifdef __IPHONE_7_0
-//    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
-//        [self setEdgesForExtendedLayout:UIRectEdgeNone];
-//    }
-#endif
-    
-    //这里的controller可以使 ollaController，ollaDataSource
-    for (id controller in _controllers) {
-        if ([controller respondsToSelector:@selector(setContext:)]) {
-            [controller setContext:self.context];
-            if ([controller respondsToSelector:@selector(viewLoaded)]) {
-                [controller viewLoaded];//可以在controller里面做一些初始化view的工作
-            }
-        }
-    }
-    
+    [self.controller viewDidLoad];
     [self applyDataBinding];
 }
 
-
--(void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.controller viewWillAppear];
     [self.context setCurrentViewController:self];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.controller viewWillDisappear];
+}
 
 - (void)setConfig:(id)config{
     if (_config != config) {

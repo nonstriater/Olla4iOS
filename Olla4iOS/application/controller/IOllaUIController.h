@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IOllaUIContext.h"
 
-@protocol IOllaController <NSObject>
+@protocol IOllaUIController <NSObject>
 
 @optional
-- (void)viewLoaded;
+- (void)viewDidLoad;
+- (void)viewWillAppear;
+- (void)viewWillDisappear;
 
 @end

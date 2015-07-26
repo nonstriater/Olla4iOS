@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IOllaController.h"
 
-@interface OllaTask : NSObject<IOllaController>
+@interface OllaTask : NSObject
 
 @property(nonatomic,weak) id<IOllaUIContext> context;
 @property(nonatomic,weak) IBOutlet id delegate;

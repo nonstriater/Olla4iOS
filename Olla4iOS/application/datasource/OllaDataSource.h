@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IOllaController.h"
 #import "IOllaDownlinkTask.h"
 #import "OllaTask.h"
 
-@interface OllaDataSource : OllaTask<IOllaController,IOllaDownlinkTask>
+@interface OllaDataSource : OllaTask<IOllaDownlinkTask>
 
 @property(nonatomic,strong) NSMutableArray *dataObjects;
 

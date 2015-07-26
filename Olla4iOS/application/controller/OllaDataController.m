@@ -10,6 +10,11 @@
 
 @implementation OllaDataController
 
+
+- (void)viewDidLoad{}
+- (void)viewWillAppear{}
+- (void)viewWillDisappear{}
+
 - (void)dealloc{
     NSLog(@"%@ dealloc!",self);
 }

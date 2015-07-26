@@ -17,10 +17,6 @@
 @synthesize skipCached = _skipCached;
 @synthesize dataChanged = _dataChanged;
 
-- (void)viewLoaded{
-
-}
-
 #pragma  mark - access data
 
 - (NSUInteger)numberOfSection{

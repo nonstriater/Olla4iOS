@@ -30,9 +30,8 @@
 }
 
 
-- (void)viewLoaded{
-    
-    [super viewLoaded];
+- (void)viewDidLoad{
+    [super viewDidLoad];
     
     self.groupData = [NSMutableArray array];
     if (IS_IOS7) {

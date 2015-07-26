@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "OllaTask.h"
+#import "IOllaUIController.h"
 #import "OllaDataSource.h"
 
-@interface OllaDataController : OllaTask<OllaDataSourceDelegate>
+@interface OllaDataController : OllaTask<OllaDataSourceDelegate,IOllaUIController>
 
 @property(nonatomic,strong) IBOutlet OllaDataSource *dataSource;
 

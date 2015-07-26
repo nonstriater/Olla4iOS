@@ -13,9 +13,9 @@
 
 #pragma mark - collectionview datasource
 
--(void)viewLoaded{
+-(void)viewDidLoad{
 
-    [super viewLoaded];
+    [super viewDidLoad];
     if ([self.itemViewNib length]) {
         [self.collectionView registerNib:[UINib nibWithNibName:self.itemViewNib bundle:nil] forCellWithReuseIdentifier:self.itemViewNib];
     }else{

@@ -24,9 +24,22 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
+    [self.controller viewDidLoad];
     [self applyDataBinding];
 }
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.controller viewWillAppear];
+    [self.context setCurrentViewController:self];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.controller viewWillDisappear];
+}
+
 
 - (void)setConfig:(id)config{
     if (_config != config) {

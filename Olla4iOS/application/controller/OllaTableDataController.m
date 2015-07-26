@@ -108,7 +108,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row<[_headerCells count]) {
+    if (indexPath.section==0 && indexPath.row<[_headerCells count]) {
         return [[_headerCells objectAtIndex:indexPath.row] frame].size.height;
     }
     

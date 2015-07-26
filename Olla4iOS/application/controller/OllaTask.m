@@ -13,9 +13,6 @@
 @synthesize context = _context;
 @synthesize delegate = _delegate;
 
--(void)viewLoaded{
-}
-
 - (void)dealloc{
     
     self.delegate = nil;
