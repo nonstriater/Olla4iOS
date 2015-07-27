@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IOllaUIContext.h"
 
 @interface OllaTask : NSObject
 
