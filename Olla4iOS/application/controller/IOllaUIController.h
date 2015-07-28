@@ -13,6 +13,7 @@
 @optional
 - (void)viewDidLoad;
 - (void)viewWillAppear;
+- (void)viewDidLayoutSubviews;
 - (void)viewWillDisappear;
 
 @end

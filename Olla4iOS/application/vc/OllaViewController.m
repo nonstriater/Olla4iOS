@@ -48,6 +48,10 @@
     [self.context setCurrentViewController:self];
 }
 
+- (void)viewDidLayoutSubviews{
+    [self.controller viewDidLayoutSubviews];
+}
+
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.controller viewWillDisappear];

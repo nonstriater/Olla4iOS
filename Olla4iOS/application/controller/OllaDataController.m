@@ -13,6 +13,7 @@
 
 - (void)viewDidLoad{}
 - (void)viewWillAppear{}
+- (void)viewDidLayoutSubviews{}
 - (void)viewWillDisappear{}
 
 - (void)dealloc{

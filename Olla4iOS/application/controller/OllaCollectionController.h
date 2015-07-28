@@ -7,6 +7,7 @@
 //
 
 // base controller for collectionView & tableView
+#import <UIKit/UIKit.h>
 #import "OllaDataController.h"
 
 @interface OllaCollectionController : OllaDataController
