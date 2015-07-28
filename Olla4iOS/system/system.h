@@ -30,6 +30,8 @@
 #import "OllaRefreshView.h"
 #import "OllaLoadingMoreView.h"
 
+#import "OllaBannerCell.h"
+#import "OllaBannerView.h"
 
 #import "UIView+Gesture.h"
 #import "UIView+additions.h"
