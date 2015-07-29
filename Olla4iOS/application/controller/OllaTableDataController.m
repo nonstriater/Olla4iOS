@@ -112,14 +112,16 @@
         return [[_headerCells objectAtIndex:indexPath.row] frame].size.height;
     }
     
-//    UITableViewCell *cell = nil;
-//    if (cell.fd_isTemplateLayoutCell) {//动态高度
-//        [tableView fd_heightForCellWithIdentifier:self.reusableCellIdentifier cacheByIndexPath:indexPath configuration:nil];
-//    }s
-    
     CGFloat height = [self heightForRowAtIndexPath:indexPath];
-    if(height<0.00001f)
-        return tableView.rowHeight;
+    if(height<0.00001f){
+        height = [tableView fd_heightForCellWithIdentifier:self.reusableCellIdentifier cacheByIndexPath:indexPath configuration:^(OllaTableViewCell *cell){
+            [self configCell:cell atIndexPath:indexPath];
+        }];
+        if (height<0.00001f) {
+             height = tableView.rowHeight;
+        }
+    }
+    
     return height;
 }
 

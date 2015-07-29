@@ -53,5 +53,7 @@
 #import "UIImageView+ProgressHUD.h"
 #import "UIViewController+HUD.h"
 
+//forkingdog 自动算高
+#import "UITableView+FDTemplateLayoutCell.h"
 
 #endif
