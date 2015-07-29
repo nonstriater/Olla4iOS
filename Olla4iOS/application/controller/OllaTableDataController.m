@@ -114,7 +114,11 @@
     
     CGFloat height = [self heightForRowAtIndexPath:indexPath];
     if(height<0.00001f){
-        height = [tableView fd_heightForCellWithIdentifier:self.reusableCellIdentifier cacheByIndexPath:indexPath configuration:^(OllaTableViewCell *cell){
+        NSString *reusableCellIdentifier = [self nibNameAtIndexPath:indexPath];
+        if ([reusableCellIdentifier length]==0) {
+            reusableCellIdentifier = self.itemViewNib;
+        }
+        height = [tableView fd_heightForCellWithIdentifier:reusableCellIdentifier cacheByIndexPath:indexPath configuration:^(OllaTableViewCell *cell){
             [self configCell:cell atIndexPath:indexPath];
         }];
         if (height<0.00001f) {
