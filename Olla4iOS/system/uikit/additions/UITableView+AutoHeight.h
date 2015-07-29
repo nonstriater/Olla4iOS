@@ -11,6 +11,6 @@
 @interface UITableView (AutoHeight)
 
 // "NO" by default
-@property(nonatomic,assign) BOOL autoHeight;
+@property(nonatomic,assign) IBInspectable BOOL autoHeight;
 
 @end
