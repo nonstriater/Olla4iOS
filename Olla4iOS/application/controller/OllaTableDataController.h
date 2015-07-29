@@ -29,6 +29,8 @@
 @property(nonatomic,strong) IBOutlet UIControl<IOllaRefreshView> *topRefreshView;
 @property(nonatomic,assign) BOOL refreshViewEnable;
 
+@property(nonatomic,assign) IBInspectable BOOL autoHeight;
+
 /**
  *  cell 是否允许删除
  */

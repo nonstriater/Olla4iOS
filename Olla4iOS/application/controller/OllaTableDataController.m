@@ -117,7 +117,7 @@
         return height;
     }
     
-    if (!tableView.autoHeight) {//静态高度
+    if (!tableView.autoHeight && !self.autoHeight) {//静态高度
         return tableView.rowHeight;
     }else{//动态高度
         NSString *reusableCellIdentifier = [self nibNameAtIndexPath:indexPath];
