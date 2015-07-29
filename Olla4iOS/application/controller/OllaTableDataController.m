@@ -112,15 +112,14 @@
         return [[_headerCells objectAtIndex:indexPath.row] frame].size.height;
     }
     
-    //静态高度
-    if (!tableView.autoHeight) {
-        return tableView.rowHeight;
+    CGFloat height = [self heightForRowAtIndexPath:indexPath];
+    if (height>0.00001f) {
+        return height;
     }
     
-    //动态高度
-    CGFloat height = [self heightForRowAtIndexPath:indexPath];
-    if(height<0.00001f){
-        //自动算高
+    if (!tableView.autoHeight) {//静态高度
+        return tableView.rowHeight;
+    }else{//动态高度
         NSString *reusableCellIdentifier = [self nibNameAtIndexPath:indexPath];
         if ([reusableCellIdentifier length]==0) {
             reusableCellIdentifier = self.itemViewNib;
@@ -129,7 +128,7 @@
             [self configCell:cell atIndexPath:indexPath];
         }];
         if (height<0.00001f) {
-             height = tableView.rowHeight;
+            height = tableView.rowHeight;
         }
     }
     
