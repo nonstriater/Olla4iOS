@@ -54,6 +54,7 @@
 #import "UIViewController+HUD.h"
 
 //forkingdog 自动算高
+#import "UITableView+AutoHeight.h"
 #import "UITableView+FDTemplateLayoutCell.h"
 
 #endif

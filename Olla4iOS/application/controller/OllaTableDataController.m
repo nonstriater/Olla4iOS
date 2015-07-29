@@ -112,6 +112,12 @@
         return [[_headerCells objectAtIndex:indexPath.row] frame].size.height;
     }
     
+    //静态高度
+    if (!tableView.autoHeight) {
+        return tableView.rowHeight;
+    }
+    
+    //动态高度
     CGFloat height = [self heightForRowAtIndexPath:indexPath];
     if(height<0.00001f){
         //自动算高
