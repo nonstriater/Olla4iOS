@@ -35,6 +35,13 @@ const static void *placeholderDisableKey = &placeholderDisableKey;
     objc_setAssociatedObject(self, placeholderKey, placeholder, OBJC_ASSOCIATION_COPY);
 }
 
+- (void)setTitle:(NSString *)title{
+    [self setTitle:title forState:UIControlStateNormal];
+}
+
+- (NSString *)title{
+    [self titleForState:UIControlStateNormal];
+}
 
 - (void)setImage:(UIImage *)image{
     

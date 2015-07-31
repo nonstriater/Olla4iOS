@@ -18,7 +18,7 @@
 @property(nonatomic,strong) IBInspectable UIColor *selectedBackgroundColor;
 
 @property(nonatomic,strong) UIImage *image;
-
+@property(nonatomic,copy) NSString *title;
 
 
 
