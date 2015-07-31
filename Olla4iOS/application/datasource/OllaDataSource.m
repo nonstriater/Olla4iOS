@@ -22,7 +22,7 @@
 - (NSUInteger)numberOfSection{
     
     if (![self count]) {
-        return 0;
+        return 1;
     }
     
     NSObject *object = [self dataObjectAtIndex:0];
