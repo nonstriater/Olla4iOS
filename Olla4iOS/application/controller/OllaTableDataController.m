@@ -108,13 +108,14 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section==0 && indexPath.row<[_headerCells count]) {
-        return [[_headerCells objectAtIndex:indexPath.row] frame].size.height;
-    }
     
     CGFloat height = [self heightForRowAtIndexPath:indexPath];
     if (height>0.00001f) {
         return height;
+    }
+    
+    if (indexPath.section==0 && indexPath.row<[_headerCells count]) {
+        return [[_headerCells objectAtIndex:indexPath.row] frame].size.height;
     }
     
     if (!tableView.autoHeight && !self.autoHeight) {//静态高度

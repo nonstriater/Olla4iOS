@@ -9,7 +9,6 @@
 
 @interface UIButton (CacheURL)
 
-
 @property(nonatomic,strong) IBInspectable NSString *remoteImageURL;
 @property(nonatomic,strong) IBInspectable NSString *remoteBackgroundImageURL;
 
@@ -19,7 +18,5 @@
 
 @property(nonatomic,strong) UIImage *image;
 @property(nonatomic,copy) NSString *title;
-
-
 
 @end
