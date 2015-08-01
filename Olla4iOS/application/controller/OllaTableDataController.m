@@ -141,7 +141,11 @@
     DDLogInfo(@"indexPath row = %ld",(long)indexPath.row);
     
     if (indexPath.section==0 && indexPath.row<[_headerCells count]) {
-        return [_headerCells objectAtIndex:indexPath.row];
+        UITableViewCell *cell = [_headerCells objectAtIndex:indexPath.row];
+        if ([cell isKindOfClass:OllaTableViewCell.class]) {
+            [self configCell:(OllaTableViewCell *)cell atIndexPath:indexPath];
+        }
+        return cell;
     }
     
     // xib和SB的区别
