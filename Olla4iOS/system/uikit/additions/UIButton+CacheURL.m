@@ -40,7 +40,7 @@ const static void *placeholderDisableKey = &placeholderDisableKey;
 }
 
 - (NSString *)title{
-    [self titleForState:UIControlStateNormal];
+    return [self titleForState:UIControlStateNormal];
 }
 
 - (void)setImage:(UIImage *)image{

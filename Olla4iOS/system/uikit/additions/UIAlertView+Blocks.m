@@ -3,7 +3,27 @@
 //  UIAlertViewBlocks
 //
 //  Created by Ryan Maxwell on 29/08/13.
-//  Copyright (c) 2013 Ryan Maxwell. All rights reserved.
+//
+//  The MIT License (MIT)
+//
+//  Copyright (c) 2013 Ryan Maxwell
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy of
+//  this software and associated documentation files (the "Software"), to deal in
+//  the Software without restriction, including without limitation the rights to
+//  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+//  the Software, and to permit persons to whom the Software is furnished to do so,
+//  subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+//  FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+//  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+//  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+//  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
 #import "UIAlertView+Blocks.h"
@@ -22,20 +42,27 @@ static const void *UIAlertViewShouldEnableFirstOtherButtonBlockKey  = &UIAlertVi
 
 @implementation UIAlertView (Blocks)
 
-+ (void)showWithTitle:(NSString *)title
-              message:(NSString *)message
-    cancelButtonTitle:(NSString *)cancelButtonTitle
-    otherButtonTitles:(NSArray *)otherButtonTitles
-             tapBlock:(UIAlertViewCompletionBlock)tapBlock {
++ (instancetype)showWithTitle:(NSString *)title
+                      message:(NSString *)message
+                        style:(UIAlertViewStyle)style
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSArray *)otherButtonTitles
+                     tapBlock:(UIAlertViewCompletionBlock)tapBlock {
+    
+    NSString *firstObject = otherButtonTitles.count ? otherButtonTitles[0] : nil;
     
     UIAlertView *alertView = [[self alloc] initWithTitle:title
                                                  message:message
                                                 delegate:nil
                                        cancelButtonTitle:cancelButtonTitle
-                                       otherButtonTitles:nil];
+                                       otherButtonTitles:firstObject, nil];
     
-    for (NSString *buttonTitle in otherButtonTitles) {
-        [alertView addButtonWithTitle:buttonTitle];
+    alertView.alertViewStyle = style;
+    
+    if (otherButtonTitles.count > 1) {
+        for (NSString *buttonTitle in [otherButtonTitles subarrayWithRange:NSMakeRange(1, otherButtonTitles.count - 1)]) {
+            [alertView addButtonWithTitle:buttonTitle];
+        }
     }
     
     if (tapBlock) {
@@ -43,15 +70,27 @@ static const void *UIAlertViewShouldEnableFirstOtherButtonBlockKey  = &UIAlertVi
     }
     
     [alertView show];
+    
 #if !__has_feature(objc_arc)
-    [alertView release];
+    return [alertView autorelease];
+#else
+    return alertView;
 #endif
 }
 
 
-+ (void)showMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle{
-
-    [self showWithTitle:nil message:message cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil tapBlock:nil];
++ (instancetype)showWithTitle:(NSString *)title
+                      message:(NSString *)message
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSArray *)otherButtonTitles
+                     tapBlock:(UIAlertViewCompletionBlock)tapBlock {
+    
+    return [self showWithTitle:title
+                       message:message
+                         style:UIAlertViewStyleDefault
+             cancelButtonTitle:cancelButtonTitle
+             otherButtonTitles:otherButtonTitles
+                      tapBlock:tapBlock];
 }
 
 #pragma mark -

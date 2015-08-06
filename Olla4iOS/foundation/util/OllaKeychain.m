@@ -29,7 +29,7 @@
                             (__bridge id)kSecReturnData:@YES};
     status = SecItemCopyMatching((__bridge CFDictionaryRef)query, &result);
     if (status != errSecSuccess && error != NULL) {
-        *error = [[NSError alloc] initWithDomain:@"com.olla,keychain.error" code:-0002 userInfo:@{@"message":@"Some thing wrong"}];
+        *error = [[NSError alloc] initWithDomain:@"com.olla,keychain.error" code:status userInfo:@{@"message":@"Some thing wrong"}];
         return nil;
     }
     
@@ -59,7 +59,7 @@
     status = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
     
     if (status != errSecSuccess && error!=NULL) {
-        *error = [[NSError alloc] initWithDomain:@"com.olla.keychain.error" code:-0002 userInfo:@{@"message":@"Some thing wrong"}];
+        *error = [[NSError alloc] initWithDomain:@"com.olla.keychain.error" code:status userInfo:@{@"message":@"Some thing wrong"}];
         return NO;
     }
     
@@ -82,7 +82,7 @@
     status = SecItemDelete((__bridge CFDictionaryRef)query);
     
     if (status!=errSecSuccess && error!=NULL) {
-        *error = [[NSError alloc] initWithDomain:@"com.olla.keychain.error" code:-0002 userInfo:@{@"message":@"Some thing wrong"}];
+        *error = [[NSError alloc] initWithDomain:@"com.olla.keychain.error" code:status userInfo:@{@"message":@"Some thing wrong"}];
         return NO;
     }
     
