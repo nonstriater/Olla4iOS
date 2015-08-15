@@ -28,8 +28,7 @@
 @property(nonatomic,strong) IBOutletCollection(UITableViewCell) NSArray *footerCells;
 
 @property(nonatomic,strong) IBOutlet UIControl<IOllaRefreshView> *topRefreshView;
-@property(nonatomic,assign) BOOL refreshViewEnable;
-
+@property(nonatomic,assign) IBInspectable BOOL refreshViewEnable;
 @property(nonatomic,assign) IBInspectable BOOL autoHeight;
 
 /**
