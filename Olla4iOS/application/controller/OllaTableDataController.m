@@ -24,6 +24,13 @@
     return self;
 }
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    if (self.headerView) {
+        self.tableView.tableHeaderView = self.headerView;
+    }
+}
+
 - (void)dealloc{
     self.tableView.delegate = nil;
     self.tableView.dataSource = nil;
