@@ -118,9 +118,10 @@
     id items = _dataKey ? [resultsData dataForKeyPath:_dataKey]:resultsData;
     if ([items isKindOfClass:[NSArray class]]) {
         [[self dataObjects] addObjectsFromArray:items];
-        
     }else if([items isKindOfClass:[NSDictionary class]]){
         [[self dataObjects] addObject:[NSMutableDictionary dictionaryWithDictionary:items]];
+    }else{
+        [[self dataObjects] addObject:items];
     }
     
 }
