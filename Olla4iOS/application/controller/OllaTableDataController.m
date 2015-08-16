@@ -170,12 +170,7 @@
         DDLogWarn(@"没有nib name");
     }
     
-    static NSString *reuseIdentifier= nil;
-    if (!reuseIdentifier) {
-        reuseIdentifier = nibName;
-    }
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nibName];
     //只有xib能用，sb不能用
     if (!cell) {
         //意义在于可以在自定义的cell的initWithStyle:..nib..方法中初始化参数
@@ -184,7 +179,7 @@
             clazz = [OllaTableViewCell class];
         }
         
-        cell = [[clazz alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier nibName:nibName];
+        cell = [[clazz alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nibName nibName:nibName];
     }
     
     
