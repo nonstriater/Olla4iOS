@@ -120,10 +120,9 @@
         [[self dataObjects] addObjectsFromArray:items];
     }else if([items isKindOfClass:[NSDictionary class]]){
         [[self dataObjects] addObject:[NSMutableDictionary dictionaryWithDictionary:items]];
-    }else{
+    }else if(items){
         [[self dataObjects] addObject:items];
     }
-    
 }
 
 - (void)downlinkTaskDidLoadedFromCache:(id)cache timestamp:(NSDate *)timestamp{
