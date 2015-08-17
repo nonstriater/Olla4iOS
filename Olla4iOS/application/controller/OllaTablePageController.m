@@ -45,7 +45,7 @@
         _bottomLoadingView.selectionStyle = UITableViewCellSelectionStyleNone;
         _bottomLoadingView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         
-        UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         indicatorView.center = _bottomLoadingView.center;
         indicatorView.autoresizingMask = UIViewAutoresizingNone;
         _bottomLoadingView.indicatorView = indicatorView;
