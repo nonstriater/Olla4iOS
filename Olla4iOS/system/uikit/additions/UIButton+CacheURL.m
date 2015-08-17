@@ -44,8 +44,11 @@ const static void *placeholderDisableKey = &placeholderDisableKey;
 }
 
 - (void)setImage:(UIImage *)image{
-    
     [self setImage:image forState:UIControlStateNormal];
+}
+
+- (UIImage *)image{
+    return [self imageForState:UIControlStateNormal];
 }
 
 - (BOOL)placeholderDisable{
