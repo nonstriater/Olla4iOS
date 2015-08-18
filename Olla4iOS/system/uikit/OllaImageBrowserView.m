@@ -136,8 +136,8 @@
    // [_imageView removeHUD];
     
     _imageView.image = image;
-    CGFloat height = 320*image.size.height/image.size.width;
-    CGRect rect = CGRectMake(0, (CGRectGetHeight(self.frame)-height)/2, 320.f, height);
+    CGFloat height = Screen_Width*image.size.height/image.size.width;
+    CGRect rect = CGRectMake(0, (CGRectGetHeight(self.frame)-height)/2, Screen_Width, height);
     [UIView animateWithDuration:0.4 delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _imageView.frame = rect;
     } completion:nil];

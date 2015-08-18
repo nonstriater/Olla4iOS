@@ -8,6 +8,7 @@
 
 #import "OllaTablePageController.h"
 #import "OllaPageDataSource.h"
+#import "Olla4iOS.h"
 
 @implementation OllaTablePageController
 
@@ -40,7 +41,7 @@
 -(UITableViewCell<IOllaLoadingMoreView> *)bottomLoadingView{
     if (!_bottomLoadingView) {// xib 中没有配置，使用代码配置
         
-        _bottomLoadingView = [[OllaLoadingMoreView  alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+        _bottomLoadingView = [[OllaLoadingMoreView  alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 40)];
         _bottomLoadingView.backgroundColor = [UIColor clearColor];
         _bottomLoadingView.selectionStyle = UITableViewCellSelectionStyleNone;
         _bottomLoadingView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
