@@ -41,18 +41,15 @@
 - (void)setHasMoreData:(BOOL)hasMoreData{
     _hasMoreData = hasMoreData;
     if (!_hasMoreData) {// no more data
-        [self.textLabel setText:@"no more data"];
+        [self.textLabel setText:@"无数据"];
         self.textLabel.center = self.center;
         [self.textLabel setHidden:NO];
         [self.indicatorView setHidden:YES];
     }else{
         
-        [self.textLabel setText:@"loading more..."];
-        [self.textLabel setHidden:NO];
-        self.textLabel.originX =120;
-        self.indicatorView.center = CGPointMake(120.f, CGRectGetHeight(self.bounds)/2);
-        self.textLabel.originY = self.indicatorView.originY - 10;
+        [self.textLabel setHidden:YES];
         [self.indicatorView setHidden:NO];
+        self.indicatorView.center =self.center;
     }
     
 }

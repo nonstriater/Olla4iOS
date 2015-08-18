@@ -55,7 +55,7 @@
         UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 40)];
         textLabel.center = _bottomLoadingView.center;
         indicatorView.autoresizingMask = UIViewAutoresizingNone;
-        textLabel.textColor = [UIColor whiteColor];
+        textLabel.textColor = [UIColor lightGrayColor];
         textLabel.font = [UIFont systemFontOfSize:13.f];
         textLabel.backgroundColor = [UIColor clearColor];
         textLabel.textAlignment = NSTextAlignmentCenter;
