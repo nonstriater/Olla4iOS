@@ -47,9 +47,11 @@
                value = [self.convertor transformedValue:value];
             }
 
-            if ([value isString] && self.stringFormat && [self.stringFormat rangeOfString:@"%@"].location!=NSNotFound) {
+            if ([value isString] && self.stringFormat) {
+                if (![self.stringFormat hasPrefix:@"@\""]) {
+                    self.stringFormat = [NSString stringWithFormat:@"@\"%@\"",self.stringFormat];
+                }
                 value= [NSString stringWithFormat:self.stringFormat,value];
-
             }
             
             [view setValue:value forKeyPath:_propertyKeyPath];
