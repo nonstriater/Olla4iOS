@@ -48,9 +48,6 @@
             }
 
             if ([value isString] && self.stringFormat) {
-                if (![self.stringFormat hasPrefix:@"@\""]) {
-                    self.stringFormat = [NSString stringWithFormat:@"@\"%@\"",self.stringFormat];
-                }
                 value= [NSString stringWithFormat:self.stringFormat,value];
             }
             
