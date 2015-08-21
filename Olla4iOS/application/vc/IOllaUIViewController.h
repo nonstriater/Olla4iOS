@@ -19,8 +19,6 @@
 @property(nonatomic,strong) NSString *scheme;
 @property(nonatomic,weak) id parentController;//used for container ViewController
 
-@property(nonatomic, strong) IBOutletCollection(id) NSArray *controllers;
-
 //写这里，xib中iboulet变量老出不来
 //@property(nonatomic,strong) IBOutlet OllaDataBindContainer *dataBindContainer;
 
