@@ -15,6 +15,7 @@
 
 - (void)dealloc{
     
+    [OllaTask cancelPreviousPerformRequestsWithTarget:self];
     self.delegate = nil;
     NSLog(@"Dealloc:%@",self);
 }
