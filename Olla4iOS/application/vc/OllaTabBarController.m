@@ -21,7 +21,6 @@
 @synthesize params = _params;
 @synthesize alias = _alias;
 @synthesize scheme = _scheme;
-@synthesize controllers = _controller;
 @synthesize parentController = _parentController;
 
 //@synthesize dataBindContainer = _dataBindContainer;
