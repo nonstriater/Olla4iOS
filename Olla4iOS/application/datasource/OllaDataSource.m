@@ -21,7 +21,11 @@
 
 - (NSUInteger)numberOfSection{
     
-    if (![self count]) {
+    if (![self count] && self.twod) {//如果是二维结构且空
+        return 0;
+    }
+    
+    if (![self count]) {//如果是一维结构且空，可能需要header cell
         return 1;
     }
     

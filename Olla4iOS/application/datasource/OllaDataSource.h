@@ -23,6 +23,8 @@
 @property(nonatomic,assign,getter = isLoaded) BOOL loaded;
 @property(nonatomic,readonly,getter = isEmpty) BOOL empty;
 
+@property(nonatomic,assign) BOOL twod;//二维结构
+
 - (void)refreshData;
 - (void)loadData;
 - (void)cancel;
