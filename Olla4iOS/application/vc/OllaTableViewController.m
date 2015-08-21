@@ -11,7 +11,6 @@
 
 @implementation OllaTableViewController
 
-@synthesize controllers = _controllers;
 @synthesize context = _context;
 @synthesize config = _config;
 @synthesize url = _url;
