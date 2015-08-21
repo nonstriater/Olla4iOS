@@ -12,8 +12,6 @@
 
 @interface OllaViewController : UIViewController<IOllaUIViewController>
 
-@property(nonatomic, strong) IBOutletCollection(id) NSArray *controllers;
-
 @property(nonatomic,strong) IBOutlet OllaDataBindContainer *dataBindContainer;
 
 /**
