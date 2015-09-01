@@ -47,7 +47,7 @@
                value = [self.convertor transformedValue:value];
             }
 
-            if ([value isString] && self.stringFormat) {
+            if ([value isString] && [value length] && self.stringFormat) {
                 value= [NSString stringWithFormat:self.stringFormat,value];
             }
             

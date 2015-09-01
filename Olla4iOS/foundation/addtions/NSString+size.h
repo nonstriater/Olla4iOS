@@ -14,6 +14,8 @@
 //计算字符串占据的size
 - (CGSize)sizeWithFont:(UIFont *)font constrainedSize:(CGSize)size;
 
+- (CGSize)sizeWithFont:(UIFont *)font constrainedSize:(CGSize)size numberOfLine:(NSUInteger)lines;
+
 //判断是否含有字串，iOS8以后才添加了一个-containsString的方法
 - (BOOL)containsSubString:(NSString *)string;
 
