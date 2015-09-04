@@ -29,6 +29,7 @@
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
     imageView.backgroundColor = RGB_HEX(0xDFDFDF);
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:imageView];
     self.imageView = imageView;
     
