@@ -27,6 +27,8 @@
 
 - (void)layoutUI{
     
+    self.clipsToBounds = YES;//imageView被撑大
+    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
     imageView.backgroundColor = RGB_HEX(0xDFDFDF);
     imageView.contentMode = UIViewContentModeScaleAspectFill;
