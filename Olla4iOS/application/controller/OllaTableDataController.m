@@ -145,8 +145,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    DDLogInfo(@"indexPath row = %ld",(long)indexPath.row);
-    
     if (indexPath.section==0 && indexPath.row<[_headerCells count]) {
         UITableViewCell *cell = [_headerCells objectAtIndex:indexPath.row];
         if ([cell isKindOfClass:OllaTableViewCell.class]) {
