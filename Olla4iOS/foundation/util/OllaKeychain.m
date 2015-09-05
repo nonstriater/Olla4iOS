@@ -44,7 +44,9 @@
         return NO;
     }
     
-    [OllaKeychain deletePasswordForService:service account:account error:error];
+    //如果keychain没有这一项，删除将失败，导致setPassword 返回有值的error，导致bug
+    //[OllaKeychain deletePasswordForService:service account:account error:error];
+    [OllaKeychain deletePasswordForService:service account:account error:nil];
     if (!password) {
         return YES;
     }
