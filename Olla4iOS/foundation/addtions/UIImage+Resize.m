@@ -25,7 +25,6 @@
 //eg 640*1136 , 以宽为准，高度等比例缩放
 - (UIImage *)resizeAspectImageWithSize:(CGSize)size{
 
-    UIGraphicsBeginImageContext(size);
 
     CGFloat widthScale = size.width/self.size.width; // 以宽为准
     CGFloat height = widthScale * self.size.height;//
