@@ -7,8 +7,9 @@
 //
 
 #import "UIActionSheet+Blocks.h"
-
 #import <objc/runtime.h>
+#import "UIActionSheet+iOS8.h"
+#import "Olla4iOS.h"
 
 static const void *UIActionSheetOriginalDelegateKey = &UIActionSheetOriginalDelegateKey;
 
@@ -77,6 +78,13 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
 destructiveButtonTitle:(NSString *)destructiveButtonTitle
  otherButtonTitles:(NSArray *)otherButtonTitles
           tapBlock:(UIActionSheetCompletionBlock)tapBlock {
+    
+    
+    if(IS_IOS8){
+        [UIActionSheet showWithTitle:title cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles tapBlock:tapBlock];
+        
+        return;
+    }
     
     UIActionSheet *actionSheet = [[self alloc] initWithTitle:title
                                                     delegate:nil
