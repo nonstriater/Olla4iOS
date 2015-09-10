@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef void (^UIActionSheetiOS8Block) (UIAlertController *actionSheet);
-typedef void (^UIActionSheetCompletionBlock) (UIAlertController *actionSheet, NSInteger buttonIndex);
+#import "UIActionSheet+Blocks.h"
 
 @interface UIActionSheet (iOS8)
 
