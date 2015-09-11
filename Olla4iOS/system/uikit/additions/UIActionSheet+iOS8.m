@@ -33,9 +33,25 @@
         }]];
     }
     
-    UIViewController *presentingVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *presentingVC = [self topMostController];
     [presentingVC presentViewController:actionSheet animated:YES completion:nil];
     
+}
+
++ (UIViewController*) topMostController
+{
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    if (!keyWindow)
+    {
+        keyWindow = [[[UIApplication sharedApplication] delegate] window];
+    }
+    UIViewController *topController = keyWindow.rootViewController;
+    
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+    
+    return topController;
 }
 
 @end
