@@ -33,6 +33,9 @@
     }
     if (!value || [value isKindOfClass:[NSNull class]]) {
         value = self.targetNilValue;
+        if (!value && [self.secondDataKeyPath length]) {
+            value = [data dataForKeyPath:_secondDataKeyPath];
+        }
     }
     
     for (UIView *view in _views) {
