@@ -259,9 +259,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return @"删除";
-    
+    return NSLocalizedString(@"删除", @"");
 }
 
 
@@ -278,7 +276,5 @@
     [_tableView reloadData];
     
 }
-
-
 
 @end
