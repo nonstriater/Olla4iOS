@@ -14,14 +14,12 @@
     self.dataLoadingError = NO;
     [super cancel];
     [self stopLoading];
-    
 }
 
 - (void)startLoading{
     self.dataLoadingError = NO;
     [_dataEmptyView removeFromSuperview];
     [_dataNotFoundView removeFromSuperview];
-    
 }
 
 //to be overwrite
@@ -38,10 +36,8 @@
 #pragma datasource delegate
 
 - (void)dataSourceWillLoading:(OllaDataSource *)dataSource{
-    
     [super dataSourceWillLoading:dataSource];
     [self startLoading];
-    
 }
 
 - (void)dataSourceDidLoaded:(OllaDataSource *)dataSource{
@@ -52,7 +48,6 @@
 }
 
 - (void)dataSource:(OllaDataSource *)dataSource didFitalError:(NSError *)error{
-    
     self.dataLoadingError = YES;
     [self stopLoading];
     [super dataSource:dataSource didFitalError:error];

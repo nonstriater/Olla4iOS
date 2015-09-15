@@ -69,7 +69,6 @@
 
 
 - (Class)refreshViewClass{
-    
     return [OllaRefreshView class];
 }
 
@@ -217,17 +216,14 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if ([self.delegate respondsToSelector:@selector(tableDataController:didSelectRowAtIndexPath:)]) {
         [self.delegate tableDataController:self didSelectRowAtIndexPath:indexPath];
     }
-    
 }
 
 - (void)tableViewCell:(OllaTableViewCell *)cell doAction:(id)sender event:(UIEvent *)event{
-    
     if ([self.delegate respondsToSelector:@selector(tableDataController:cell:doAction: event:)]) {
         [self.delegate tableDataController:self cell:cell doAction:sender event:event];
     }
