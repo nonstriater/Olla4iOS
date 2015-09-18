@@ -29,6 +29,9 @@
     if (self.headerView) {
         self.tableView.tableHeaderView = self.headerView;
     }
+    if (self.footerView) {
+        self.tableView.tableFooterView = self.footerView;
+    }
 }
 
 - (void)dealloc{

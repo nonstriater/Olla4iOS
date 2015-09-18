@@ -22,6 +22,7 @@
 
 @interface OllaTableDataController : OllaCollectionController<UITableViewDelegate,UITableViewDataSource,OllaTableViewCellDelegate>
 
+@property(nonatomic,weak) IBOutlet UIView *footerView;
 @property(nonatomic,weak) IBOutlet UIView *headerView;
 @property(nonatomic,weak) IBOutlet UITableView *tableView;
 @property(nonatomic,strong) IBOutletCollection(UITableViewCell) NSMutableArray *headerCells;//方便应对“cell可消除”这样的需求
