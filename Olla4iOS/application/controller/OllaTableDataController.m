@@ -111,7 +111,7 @@
     
     NSUInteger dataSourceCount = [self.dataSource numberOfCellsAtSection:section];
     if (section==0) {
-        return [_headerCells count] + dataSourceCount ;
+        return [_headerCells count] + [_footerCells count] + dataSourceCount ;
     }
     return  dataSourceCount ;
 }
@@ -125,6 +125,10 @@
     
     if (indexPath.section==0 && indexPath.row<[_headerCells count]) {
         return [[_headerCells objectAtIndex:indexPath.row] frame].size.height;
+    }
+    
+    if (indexPath.section==0 && indexPath.row>=([_headerCells count]+self.dataSource.count)) {
+        return [[_footerCells objectAtIndex:indexPath.row] frame].size.height;
     }
     
     if (!tableView.autoHeight && !self.autoHeight) {//静态高度
@@ -149,6 +153,14 @@
     
     if (indexPath.section==0 && indexPath.row<[_headerCells count]) {
         UITableViewCell *cell = [_headerCells objectAtIndex:indexPath.row];
+        if ([cell isKindOfClass:OllaTableViewCell.class]) {
+            [self configCell:(OllaTableViewCell *)cell atIndexPath:indexPath];
+        }
+        return cell;
+    }
+    
+    if (indexPath.section==0 && indexPath.row>=([_headerCells count]+self.dataSource.count)) {
+        UITableViewCell *cell = [_footerCells objectAtIndex:indexPath.row];
         if ([cell isKindOfClass:OllaTableViewCell.class]) {
             [self configCell:(OllaTableViewCell *)cell atIndexPath:indexPath];
         }

@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, OllaDataBindMode){
+    OllaDataBindModeNoWay=0,
     OllaDataBindModeOneWay,
     OllaDataBindModeTwoWay
 };
