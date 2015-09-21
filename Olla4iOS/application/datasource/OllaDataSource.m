@@ -20,7 +20,6 @@
 #pragma  mark - access data
 
 - (NSUInteger)numberOfSection{
-    
     if (![self count] && self.twod) {//如果是二维结构且空
         return 0;
     }
@@ -37,7 +36,6 @@
 }
 
 - (NSUInteger)numberOfCellsAtSection:(NSUInteger)section{
-    
     id object = [self dataObjectAtIndex:section];
     if (![object isArray]) {
         return [self count];
@@ -48,7 +46,6 @@
 
 
 - (NSInteger)count{
-    
     return [_dataObjects count];
 }
 
@@ -71,7 +68,6 @@
 
 
 - (id)dataObjectAtIndex:(NSUInteger) index{
-    
     if (index<[self count]) {
         return [_dataObjects objectAtIndex:index];
     }
@@ -80,7 +76,6 @@
 }
 
 - (BOOL)removeObjectAtIndex:(NSUInteger)index{
-    
     if (index>=[self count]) {
         return NO;
     }
@@ -92,21 +87,21 @@
 #pragma mark - load data
 
 -(void) refreshData{
-    
     [self loadData];
 }
 
 -(void) loadData{
-    
     _loading = YES;
     if (_delegate && [_delegate respondsToSelector:@selector(dataSourceWillLoading:)]) {
         [_delegate dataSourceWillLoading:self];
     }
-    
+}
+
+- (BOOL)isEmpty{
+    return self.count==0;
 }
 
 -(void) cancel{
-    
     _loading = NO;
 }
 
