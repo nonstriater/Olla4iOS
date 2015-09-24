@@ -160,7 +160,7 @@
     }
     
     if (indexPath.section==0 && indexPath.row>=([_headerCells count]+self.dataSource.count)) {
-        UITableViewCell *cell = [_footerCells objectAtIndex:indexPath.row];
+        UITableViewCell *cell = [_footerCells objectAtIndex:(indexPath.row-[_headerCells count]-self.dataSource.count)];
         if ([cell isKindOfClass:OllaTableViewCell.class]) {
             [self configCell:(OllaTableViewCell *)cell atIndexPath:indexPath];
         }
