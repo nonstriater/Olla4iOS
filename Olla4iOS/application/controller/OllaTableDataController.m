@@ -127,7 +127,7 @@
         return [[_headerCells objectAtIndex:indexPath.row] frame].size.height;
     }
     
-    if (indexPath.section==0 && indexPath.row>=([_headerCells count]+self.dataSource.count)) {
+    if (indexPath.section==0 && indexPath.row>=([_headerCells count]+[self.dataSource numberOfCellsAtSection:0])) {
         return [[_footerCells objectAtIndex:indexPath.row] frame].size.height;
     }
     
