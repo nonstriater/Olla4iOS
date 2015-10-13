@@ -52,7 +52,7 @@
 ////////////////////////////////////////////////////////
 - (UIImage *)convertToImage{
 
-    UIGraphicsBeginImageContext(self.bounds.size);
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size,NO,[UIScreen mainScreen].scale);
     //[self.layer drawInContext:UIGraphicsGetCurrentContext()];//not work, my backgroundColor is black!
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *retImage = UIGraphicsGetImageFromCurrentImageContext();
