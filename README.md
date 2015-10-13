@@ -2,7 +2,7 @@
 
 ## 安装
 
-Olla4iOS can be installed using CocaoPods
+Olla4iOS can be installed using CocoaPods
 > pod Olla4iOS
 
 
