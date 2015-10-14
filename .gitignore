@@ -1,0 +1,20 @@
+# OSX noise
+.DS_Store
+*.zip
+./git/*
+
+#xcode
+build/
+xcuserdata/
+*.pbxuser
+*.mode1
+*.mode1v2
+*.mode1v3
+
+*.xcworkspace
+DerivedData
+*.ipa
+
+#pod
+Pods
+Podfile.lock
