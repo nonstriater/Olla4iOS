@@ -56,13 +56,13 @@
     _hasMoreData = hasMoreData;
     if (!_hasMoreData) {// no more data
         [self.textLabel setText:NSLocalizedString(@"no more data", @"")];
-        self.textLabel.center = self.center;
+        self.textLabel.center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
         [self.textLabel setHidden:NO];
         [self.indicatorView setHidden:YES];
     }else{
         [self.textLabel setHidden:YES];
         [self.indicatorView setHidden:NO];
-        self.indicatorView.center =self.center;
+        self.indicatorView.center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
     }
 }
 
