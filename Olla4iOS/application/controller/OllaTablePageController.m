@@ -54,12 +54,16 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat height = [super tableView:tableView heightForRowAtIndexPath:indexPath];
     
+    CGFloat height = 0.f;
     // loadingMore
     if ([self addBottomLoadingViewAtIndexPath:indexPath]) {
         height = self.bottomLoadingView.frame.size.height;
+    }else{
+        height = [super tableView:tableView heightForRowAtIndexPath:indexPath];
+        
     }
+ 
     return height;
 }
 
