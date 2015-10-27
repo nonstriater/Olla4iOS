@@ -79,7 +79,7 @@
 - (BOOL)addBottomLoadingViewAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == [self.dataSource numberOfSection]-1 &&
-        indexPath.row == indexPath.section?0:[self.headerCells count] + [self.dataSource numberOfCellsAtSection:indexPath.section] ) {
+        indexPath.row == (indexPath.section?0:[self.headerCells count]) + [self.dataSource numberOfCellsAtSection:indexPath.section] ) {
         return YES;
     }
     
