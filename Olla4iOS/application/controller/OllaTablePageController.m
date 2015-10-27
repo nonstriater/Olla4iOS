@@ -37,7 +37,6 @@
 
 }
 
-
 -(UITableViewCell<IOllaLoadingMoreView> *)bottomLoadingView{
     if (!_bottomLoadingView) {// xib 中没有配置，使用代码配置
         _bottomLoadingView = [[OllaLoadingMoreView  alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 40)];
@@ -46,18 +45,22 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    // 如果[datasource count]为空,就不算middleCells
-    NSUInteger dataSourceCount = [self.dataSource count];
-    return [self.headerCells count]+ dataSourceCount + 1;// loadingMore
+    
+    NSUInteger count = [super tableView:tableView numberOfRowsInSection:section];
+    if (section==[self.dataSource numberOfSection]-1) {//最后一个section加loadingMore
+        count += 1;
+    }
+    return count;
 }
 
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat height = [super tableView:tableView heightForRowAtIndexPath:indexPath];
     
-    if (indexPath.row == [self.headerCells count]+ [self.dataSource count] ) {// loadingMore
-        return self.bottomLoadingView.frame.size.height;
+    // loadingMore
+    if ([self addBottomLoadingViewAtIndexPath:indexPath]) {
+        height = self.bottomLoadingView.frame.size.height;
     }
-    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    return height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -71,22 +74,21 @@
 
 - (BOOL)addBottomLoadingViewAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row == [self.headerCells count]+ [self.dataSource count]) {
+    if (indexPath.section == [self.dataSource numberOfSection]-1 &&
+        indexPath.row == indexPath.section?0:[self.headerCells count] + [self.dataSource numberOfCellsAtSection:indexPath.section] ) {
         return YES;
     }
     
     return NO;
 }
 
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row == [self.headerCells count] + [self.dataSource count]) {
+    if ([self addBottomLoadingViewAtIndexPath:indexPath]) {
         return ;
     }
     
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
-
 }
 
 
@@ -112,7 +114,6 @@
         }
         
     }
-    
 }
 
 
