@@ -32,6 +32,13 @@
     if (self.footerView) {
         self.tableView.tableFooterView = self.footerView;
     }
+    if (self.edgeView) {
+        self.tableView.contentInset = UIEdgeInsetsMake(self.edgeView.height, 0, 0, 0);
+        self.edgeView.width = [[UIScreen mainScreen] bounds].size.width;
+        if ([self.delegate isKindOfClass:UIViewController.class]) {
+            [[(UIViewController *)self.delegate view] addSubview:self.edgeView];
+        }
+    }
 }
 
 - (void)dealloc{
