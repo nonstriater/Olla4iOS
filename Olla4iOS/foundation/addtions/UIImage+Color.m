@@ -25,28 +25,27 @@
 }
 
 + (UIImage *)imageWithAsset:(ALAsset *)asset{
-
     CGImageRef imageRef = [[asset defaultRepresentation] fullResolutionImage];
     return [UIImage imageWithCGImage:imageRef];
-
 }
 
 
 - (UIImage *)imageWithTintColor:(UIColor *)color{
-    
+    return [self imageWithTintColor:color blendMode:kCGBlendModeDestinationIn];
+}
+
+- (UIImage *)imageWithTintColor:(UIColor *)color blendMode:(CGBlendMode)mode{
     UIGraphicsBeginImageContext(self.size);
     [color setFill];
     CGRect bounds = CGRectMake(0, 0, self.size.width, self.size.height);
     UIRectFill(bounds);
-    [self drawInRect:bounds blendMode:kCGBlendModeOverlay alpha:1.f];
-    [self drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:1.f];
+    [self drawInRect:bounds blendMode:mode alpha:1.f];
     
     UIImage *destImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return destImage;
-
 }
 
-
 @end
+

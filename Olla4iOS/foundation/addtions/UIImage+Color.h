@@ -15,5 +15,6 @@
 + (UIImage *)imageWithAsset:(ALAsset *)asset;
 
 - (UIImage *)imageWithTintColor:(UIColor *)color;
+- (UIImage *)imageWithTintColor:(UIColor *)color blendMode:(CGBlendMode)mode;
 
 @end
