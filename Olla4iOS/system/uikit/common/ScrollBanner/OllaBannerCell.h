@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OllaBannerView.h"
 
 @interface OllaBannerCell : UICollectionViewCell
 
 @property(nonatomic,strong) UIImageView *imageView;
-@property(nonatomic,strong) id data;
+@property(nonatomic,strong) id<OllaBannerModelDelegate> data;
 
 @end

@@ -8,13 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol OllaBannerModelDelegate <NSObject>
+@property(nonatomic, copy) NSString *imageURL;
+@property(nonatomic, copy) NSString *title;
+@property(nonatomic, strong) id userInfo;
+@end
+
+
 @class OllaBannerView;
 typedef  void (^OllaItemSelectBlock)(OllaBannerView *bannerView,NSUInteger index);
 
 @interface OllaBannerView : UIView
 
-//url,stringUrl,uiimage
+//url：nsurl,stringUrl,uiimage
 @property (nonatomic,copy) NSArray *items;
+
+/**
+ *  是否隐藏pageControl空间
+ */
 @property (nonatomic,assign) BOOL pageControlHidden;
 
 /**
@@ -25,3 +36,8 @@ typedef  void (^OllaItemSelectBlock)(OllaBannerView *bannerView,NSUInteger index
 - (void)itemSelectedThen:(OllaItemSelectBlock)block;
 
 @end
+
+
+
+
+

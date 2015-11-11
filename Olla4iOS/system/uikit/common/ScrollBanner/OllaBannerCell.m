@@ -25,8 +25,7 @@
     return self;
 }
 
-- (void)layoutUI{
-    
+- (void)layoutUI{    
     self.clipsToBounds = YES;//imageView被撑大
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
@@ -34,20 +33,25 @@
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:imageView];
     self.imageView = imageView;
-    
 }
 
-- (void)setData:(id)data{
-    if ([data isKindOfClass:NSString.class]) {//url
-        if ([data hasPrefix:@"http"]) {
-            [self.imageView setRemoteImageURL:data];
+- (void)setData:(id<OllaBannerModelDelegate>)data{
+    
+    if (![data conformsToProtocol:@protocol(OllaBannerModelDelegate)]) {
+        return;
+    }
+    
+    NSString *imageURL = data.imageURL;
+    NSString *title = data.title;
+    
+    if ([imageURL isKindOfClass:NSString.class]) {//url
+        if ([imageURL hasPrefix:@"http"]) {
+            [self.imageView setRemoteImageURL:imageURL];
         }
-    }else if([data isKindOfClass:NSURL.class]){
-        [self.imageView setRemoteImageURL:[(NSURL *)data absoluteString]];
-    }else if([data isKindOfClass:UIImage.class]){
-        [self.imageView setImage:data];
+    }else if([imageURL isKindOfClass:NSURL.class]){
+        [self.imageView setRemoteImageURL:[(NSURL *)imageURL absoluteString]];
     }else{
-        DDLogError(@"OllaBannerCell's data not a correct type:%@",data);
+        DDLogError(@"OllaBannerCell's data not a correct type:%@",imageURL);
     }
 
 }

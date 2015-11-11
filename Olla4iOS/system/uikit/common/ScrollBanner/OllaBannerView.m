@@ -101,8 +101,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     OllaBannerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([OllaBannerCell class]) forIndexPath:indexPath];
-    cell.data = self.items[indexPath.item];
-    
+    id data = self.items[indexPath.item];
+    if ([data conformsToProtocol:@protocol(OllaBannerModelDelegate)]) {
+        cell.data = data;
+    }
     return cell;
 }
 
