@@ -8,6 +8,7 @@
 
 #import "OllaBannerView.h"
 #import "OllaBannerCell.h"
+#import "OllaBannerModelDelegate.h"
 
 @interface OllaBannerView ()<UICollectionViewDataSource,UICollectionViewDelegate>
 

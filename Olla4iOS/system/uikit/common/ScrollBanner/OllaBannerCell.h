@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OllaBannerView.h"
+#import "OllaBannerModelDelegate.h"
 
 @interface OllaBannerCell : UICollectionViewCell
 

@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol OllaBannerModelDelegate <NSObject>
-@property(nonatomic, copy) NSString *imageURL;
-@property(nonatomic, copy) NSString *title;
-@property(nonatomic, strong) id userInfo;
-@end
-
 
 @class OllaBannerView;
 typedef  void (^OllaItemSelectBlock)(OllaBannerView *bannerView,NSUInteger index);
